@@ -1,0 +1,164 @@
+.post-card {
+    background-image: url(./rectangle-26.svg);
+    background-size: 100% 100%;
+    height: 241px;
+    position: relative;
+    width: 375px;
+  }
+  
+  .post-card .music-card-instance {
+    left: 15px !important;
+    position: absolute !important;
+    top: 13px !important;
+  }
+  
+  .post-card .overlap {
+    height: 39px;
+    left: 15px;
+    position: absolute;
+    top: 83px;
+    width: 285px;
+  }
+  
+  .post-card .text-wrapper-2 {
+    color: #ffffff;
+    font-family: "Lexend-SemiBold", Helvetica;
+    font-size: 12.8px;
+    font-weight: 600;
+    left: 0;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 0;
+    width: 285px;
+  }
+  
+  .post-card .group {
+    height: 14px;
+    left: 0;
+    position: absolute;
+    top: 25px;
+    width: 75px;
+  }
+  
+  .post-card .vector {
+    height: 13px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 13px;
+  }
+  
+  .post-card .img {
+    height: 13px;
+    left: 15px;
+    position: absolute;
+    top: 0;
+    width: 13px;
+  }
+  
+  .post-card .vector-2 {
+    height: 13px;
+    left: 31px;
+    position: absolute;
+    top: 0;
+    width: 13px;
+  }
+  
+  .post-card .vector-3 {
+    height: 13px;
+    left: 46px;
+    position: absolute;
+    top: 0;
+    width: 13px;
+  }
+  
+  .post-card .overlap-group {
+    background-image: url(./vector-4.svg);
+    background-size: 100% 100%;
+    height: 13px;
+    left: 63px;
+    position: absolute;
+    top: 0;
+    width: 13px;
+  }
+  
+  .post-card .subtract {
+    height: 14px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 7px;
+  }
+  
+  .post-card .text-wrapper-3 {
+    color: #ffffff;
+    font-family: "Lexend-Light", Helvetica;
+    font-size: 11.7px;
+    font-weight: 300;
+    left: 16px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 134px;
+    width: 343px;
+  }
+  
+  .post-card .text-wrapper-4 {
+    color: #8b8b8b;
+    font-family: "Lexend-Regular", Helvetica;
+    font-size: 10.6px;
+    font-weight: 400;
+    left: 16px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+    top: 180px;
+  }
+  
+  .post-card .text-wrapper-5 {
+    color: #ffffff;
+    font-family: "Lexend-SemiBold", Helvetica;
+    font-size: 11.7px;
+    font-weight: 600;
+    left: 55px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 206px;
+  }
+  
+  .post-card .text-wrapper-6 {
+    color: #ffffff;
+    font-family: "Lexend-Regular", Helvetica;
+    font-size: 10.6px;
+    font-weight: 400;
+    left: 208px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 206px;
+  }
+  
+  .post-card .profile-instance {
+    height: 29px !important;
+    left: 19px !important;
+    position: absolute !important;
+    top: 199px !important;
+    width: 29px !important;
+  }
+  
+  .post-card .heart-instance {
+    background-image: url(./union-5.svg) !important;
+    left: 309px !important;
+    position: absolute !important;
+    top: 204px !important;
+  }
+  
+  .post-card .comment-button-instance {
+    left: 339px !important;
+    position: absolute !important;
+    top: 204px !important;
+  }
+  
