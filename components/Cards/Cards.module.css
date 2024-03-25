@@ -1,0 +1,28 @@
+.albumContainer {
+}
+
+.albumContainer{
+}
+
+.textContainer {
+}
+
+.textContainer h4,
+.textContainer h5 {
+    color: var(--groovy-white);
+    font-family: "Lexend", Helvetica;
+    text-align: center;
+}
+
+.textContainer h5 {
+    font-size: var(--lexend-subtitle-light);
+}
+
+.separator {
+    width: 10px;
+    height: auto;
+}
+
+.albumcontainerPost:hover {
+    background-color: var(--dark--grey);
+}
