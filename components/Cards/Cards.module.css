@@ -1,28 +1,48 @@
-.albumContainer {
-}
-
-.albumContainer{
-}
-
-.textContainer {
-}
-
-.textContainer h4,
-.textContainer h5 {
+.h2, .h5 {
     color: var(--groovy-white);
-    font-family: "Lexend", Helvetica;
-    text-align: center;
+    padding-right: 5px;
+    padding-left: 5px;
+    margin: 3px;
+    font-family: Helvetica, sans-serif;
 }
-
-.textContainer h5 {
-    font-size: var(--lexend-subtitle-light);
-}
-
 .separator {
     width: 10px;
     height: auto;
 }
 
-.albumcontainerPost:hover {
-    background-color: var(--dark--grey);
+
+.imageColor {
+    width: 50px;
+}
+
+.subtextContainer {
+    display:flex;
+    flex-direction: row;
+}
+
+.albumImage {
+    color: var(--groovy-white);
+    width: 100px;
+}
+
+.albumImage {
+    color: var(--groovy-white);
+}
+
+.albumContainer {
+    display: flex;
+    display: row;
+}
+
+.Image {
+    width: 100px;
+    height: 100px;
+}
+
+.h2 {
+    font-size: var(--lexend-header-semibold);
+}
+
+.h5 {
+    font-size: var(--lexend-subtitle-light);
 }

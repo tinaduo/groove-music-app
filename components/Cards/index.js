@@ -1,37 +1,42 @@
 import React from "react";
-import "./Cards.module.css";
+import styles from "./Cards.module.css";
 
 export function albumSearch() {
     return (
         <div className="albumContainer">
-            <div className="albumImage" />
-            <img
-                src=""
-                alt=""
-            />
+            <div className="albumImage">
             <div className="textContainer">
-                <h4>{albumName}</h4>
-                <h5>{artistName}</h5>
+                <h4>albumName</h4>
+                <h5>artistName</h5>
             </div>
         </div>
+    </div>
     );
 };
 
 export function AlbumContainerPost() {
     return (
-        <div className="albumcontainerPost">
-            <div className="albumImage" />
-            <div className="overlap-group">
-                <div className="albumTitle">
-                    <h2>{albumTitle}</h2>
-                </div>
-                <div className="subext">
-                    <h5>{musicType}</h5>
-                    <img className="separator" alt="separators" src="vector.svg"/>
-                    <h5>{musicYear}</h5>
-                </div>
+        <div className={`${styles.albumContainer}`}>
+            <div className={`${styles.albumImage}`}>
+                <img 
+                    className={`${styles.Image}`}
+                        alt="imageContainer"
+                        src=""
+                    />
             </div>
-            <h5>{albumName}</h5>
+            <div className={`${styles.textContainer}`}>
+                    <h2 className={`${styles.h2}`}>Album Title</h2>
+                <div className={`${styles.subtextContainer}`}>
+                    <h5 className={`${styles.h5}`}>Music Type</h5>
+                    <img 
+                        className={`${styles.separtorSVG}`}
+                        alt="separators"
+                        src="/image/separator.svg"
+                    />
+                    <h5 className={`${styles.h5}`}>Music Year</h5>
+            </div>
+            <h5 className={`${styles.h5}`}>Artist Name</h5>
+        </div>
         </div>
     );
 };
