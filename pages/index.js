@@ -4,6 +4,7 @@ import styles from "@/styles/Home.module.css";
 import Cards from  "@/components/Cards"
 import NavBar from "@/components/NavBar";
 
+
 export default function Home() {
   return (
     <>
