@@ -43,6 +43,12 @@
     font-family: 'Lexend Semibold';
 }
 
+.submitButton:focus {
+    background: #D4C4FF;
+    border: solid 4px #D4C4FF;
+    color:#000000;
+}
+
 .navContainer {
     display: flex;
     justify-content: space-between;
