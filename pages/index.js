@@ -1,9 +1,6 @@
 import Head from "next/head";
-import Image from "next/image";
 import styles from "@/styles/Home.module.css";
-import Cards from  "@/components/Cards"
-import NavBar from "@/components/NavBar";
-
+import ParentOne from "./ParentOne";
 
 export default function Home() {
   return (
@@ -15,6 +12,11 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={`${styles.main}`}>
+        <div className={styles.stuff}>
+          <h1>Groove</h1>
+          <h2>Tunebox</h2>
+        </div>
+        <div className={styles}><ParentOne/></div>
       </main>
     </>
   );
