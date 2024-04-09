@@ -26,7 +26,7 @@ export default function ChildOne({ decisionData, onDecision, onPrevious }) {
       </div>
       <div className={styles.navContainer}>
         {onPrevious && <button onClick={onPrevious} className={styles.submitButton}>Previous</button>}
-        <button onClick={handleNext} disabled={!selection} className={styles.submitButton}>
+        <button onClick={handleNext} className={styles.submitButton}>
           Next
         </button>
       </div>
