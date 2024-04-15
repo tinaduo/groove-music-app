@@ -1,8 +1,41 @@
 .main {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
   padding: 6rem;
   min-height: 100vh;
+  background: black;
+  color: white;
+  font-family: 'Lexend';
+  background-size: cover;
 }
+
+@font-face {
+  font-family: 'Lexend';
+  src: url('/fonts/Lexend-Light.ttf');
+}
+
+@font-face {
+  font-family: 'PP Monument Extended Light';
+  src: url('/fonts/PPMonumentExtended-Light.otf');
+}
+
+@font-face {
+  font-family: 'Lexend Semibold';
+  src: url('/fonts/Lexend-SemiBold.ttf');
+}
+
+.stuff h1 {
+  font-family: 'PP Monument Extended Light';
+  font-size: 40px;
+  margin-bottom: 5px;
+  margin-left: -53px;
+}
+
+.stuff h2 {
+  margin-bottom: 40px;
+  margin-left: -50px;
+}
+
+.stuff {
+  margin-top: -40px;
+}
+
+
