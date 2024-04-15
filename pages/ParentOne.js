@@ -40,7 +40,7 @@ export default function ParentOne() {
   
     return (
       <>
-         <ProgressBar progress={Math.round(currentProgress)} />
+         {currentNode.type !== 'result' && ( <ProgressBar progress={Math.round(currentProgress)}/>)}
          {currentNode.type === 'decision' && (
          <ChildOne
           decisionData={currentNode}
@@ -50,8 +50,9 @@ export default function ParentOne() {
          />
         )}
         {currentNode.type === 'result' && (
-          <ChildTwo result={currentNode.result} lottiePath={currentNode.lottiePath} buttonLink={currentNode.buttonLink}/>
+          <ChildTwo result={currentNode.result} lottiePath={currentNode.lottiePath} buttonLink={currentNode.buttonLink} chip={currentNode.chip}/>
         )}
       </>
     );
   }
+  

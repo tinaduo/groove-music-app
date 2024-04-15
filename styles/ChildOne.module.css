@@ -8,14 +8,12 @@
     min-height: 100vh;
     font-family: 'Arial', sans-serif;
     position: static;
-
 }
 
 .answersContainer {
     display: flex;
     flex-direction: column;
-    margin: 20px 0;
-    margin-top: -190%;
+    margin-top: -400px;
 }
 
 .answerButton {
