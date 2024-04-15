@@ -15,6 +15,8 @@ export default function ChildOne({ decisionData, onDecision, onPrevious }) {
   }
 
   return (
+    
+
     <div className={styles.parentContainer}>
       <div className={styles.answersContainer}>
         <div className={styles.question}><h3>{decisionData.question}</h3></div>
