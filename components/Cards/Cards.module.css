@@ -1,0 +1,48 @@
+.h2, .h5 {
+    color: var(--groovy-white);
+    padding-right: 5px;
+    padding-left: 5px;
+    margin: 3px;
+    font-family: Helvetica, sans-serif;
+}
+.separator {
+    width: 10px;
+    height: auto;
+}
+
+
+.imageColor {
+    width: 50px;
+}
+
+.subtextContainer {
+    display:flex;
+    flex-direction: row;
+}
+
+.albumImage {
+    color: var(--groovy-white);
+    width: 100px;
+}
+
+.albumImage {
+    color: var(--groovy-white);
+}
+
+.albumContainer {
+    display: flex;
+    display: row;
+}
+
+.Image {
+    width: 100px;
+    height: 100px;
+}
+
+.h2 {
+    font-size: var(--lexend-header-semibold);
+}
+
+.h5 {
+    font-size: var(--lexend-subtitle-light);
+}
