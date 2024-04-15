@@ -5,8 +5,8 @@
 }
 
 .result h3 {
-    margin-top: 30px;
     text-align: center;
+    margin-bottom: -145px;
 }
 
 .result>:nth-child(2) {
@@ -20,6 +20,7 @@
     border-radius: 35px;
     height: 400px;
     width: 360px;
+    margin-top: 40px;
 }
 
 .spotify {
@@ -31,9 +32,137 @@
     border-radius: 26px;
     font-family: 'Lexend';
     color: white;
-    margin-top: 60px;
+    margin-top: 20px;
 }
 
 .spotify:hover {
     border: solid 2px #D4C4FF ;
+}
+
+.groove {
+    margin-top: 30px;
+    font-family: 'PP Monument Extended Light';
+    font-size: 20px;
+    text-align: center;
+}
+
+/*CHIPS STYLING*/
+
+.chip {
+    padding: 3px 10px;
+    height: auto;
+    font-family: 'Lexend';
+    font-weight: bold;
+}
+
+.chip:not(:last-child) {
+    margin-right: 7px;
+}
+
+.chip.sad {
+    color: black;
+    border-radius: 20px;
+    background: #D4C4FF
+}
+  
+.chip.gloomy {
+    color: black;
+    border-radius: 20px;
+    background: #DC7755;
+}
+  
+.chip.melancholy {
+    color: black;
+    border-radius: 20px;
+    background: #F6C65C;;
+}
+
+.chip.upbeat {
+    color: black;
+    border-radius: 20px;
+    background: #D4C4FF
+}
+
+.chip.hype {
+    color: black;
+    border-radius: 20px;
+    background: #DC7755;
+}
+
+.chip.rap {
+    color: black;
+    border-radius: 20px;
+    background: #F6C65C;
+}
+
+.chip.party {
+    color: black;
+    border-radius: 20px;
+    background: #D4C4FF
+}
+
+.chip.nostalgic {
+    color: black;
+    border-radius: 20px;
+    background: #DC7755;
+}
+
+.chip.Y2K {
+    color: black;
+    border-radius: 20px;
+    background: #F6C65C;
+}
+
+.chip.indie {
+    color: black;
+    border-radius: 20px;
+    background: #D4C4FF
+}
+
+.chip.chill {
+    color: black;
+    border-radius: 20px;
+    background: #DC7755;
+}
+
+.chip.LoFi {
+    color: black;
+    border-radius: 20px;
+    background: #F6C65C;
+}
+
+.chip.country {
+    color: black;
+    border-radius: 20px;
+    background: #D4C4FF
+}
+
+.chip.folk {
+    color: black;
+    border-radius: 20px;
+    background: #DC7755;
+}
+
+.chip.blue {
+    color: black;
+    border-radius: 20px;
+    background: #F6C65C;
+}
+
+.chip.booster {
+    color: black;
+    border-radius: 20px;
+    background: #D4C4FF 
+}
+
+.chip.energy {
+    color: black;
+    border-radius: 20px;
+    background: #DC7755;
+}
+
+.chip.happy {
+    color: black;
+    border-radius: 20px;
+    background: #F6C65C;
 }
