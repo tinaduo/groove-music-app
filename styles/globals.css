@@ -20,3 +20,9 @@
 --lexend-subtitle-light: 0.83rem;
 --lexend-body-light: 1rem;
 }
+
+* {
+    margin: 0px;
+    padding: 0px;
+    background-color: var(--background-black);
+}
