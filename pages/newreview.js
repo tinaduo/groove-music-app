@@ -85,7 +85,7 @@ export default function NewReview() {
                         className={`${styles.searchBar}`}
                         type="text"
                         value={searchKey}
-                        placeholder="Search for a song"
+                        placeholder="search"
                         onChange={e => setSearchKey(e.target.value)}
                     />
                 </form>
