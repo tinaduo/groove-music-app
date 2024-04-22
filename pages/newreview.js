@@ -30,9 +30,9 @@ export default function NewReview() {
                 return;
             }
             try {
-                const response = await fetch(`https://api.spotify.com/v1/search?q=${searchKey}&type=track`, {
+                const response = await fetch(`https://api.spotify.com/v1/search?q=${encodeURIComponent(searchKey)}&type=track`, {
                     headers: {
-                        Authorization: `${token}`
+                        Authorization: `Bearer ${token}`
                     }
                 });
 
@@ -67,7 +67,6 @@ export default function NewReview() {
         );
     };
 
-
     return (
         <main className={`${styles.main}`}>
             {!token ?
@@ -86,7 +85,7 @@ export default function NewReview() {
                         className={`${styles.searchBar}`}
                         type="text"
                         value={searchKey}
-                        placeholder="search"
+                        placeholder="Search for a song"
                         onChange={e => setSearchKey(e.target.value)}
                     />
                 </form>
