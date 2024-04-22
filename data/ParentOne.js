@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import ChildOne from './ChildOne';
+import ChildOne from './ChildOne.js';
 import ChildTwo from './ChildTwo';
 import quizData from './QuizData';
 import ProgressBar from '@/components/ProgressBar';
