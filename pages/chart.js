@@ -1,7 +1,5 @@
 
 import styles from "@/styles/Home.module.css";
-import VerticalBar from "@/components/VerticalBar";
-import HorizontalChart from "@/components/HorizontalChart";
 import PieChart from "@/components/PieChart";
 
 
