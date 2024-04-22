@@ -1,12 +1,15 @@
 
 .main {
   padding: 6rem;
-  min-height: 100vh;
+  min-height: 852px;
+  width: 430px;
+  margin: 0 auto;
   background: black;
   color: white;
   font-family: 'Lexend';
   background-size: cover;
 }
+
 
 @font-face {
   font-family: 'Lexend';
@@ -32,11 +35,12 @@
 
 .stuff h2 {
   margin-bottom: 40px;
-  margin-left: -50px;
+
 }
 
-.stuff {
-  margin-top: -40px;
-}
 
+
+.navBar {
+  position: relative;
+}
 

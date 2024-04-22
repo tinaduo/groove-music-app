@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import styles from '@/styles/ChildOne.module.css';
+import NavBar from '@/components/NavigationBar';
 
 export default function ChildOne({ decisionData, onDecision, onPrevious }) {
   const [selection, setSelection] = useState(null);
@@ -15,9 +16,8 @@ export default function ChildOne({ decisionData, onDecision, onPrevious }) {
   }
 
   return (
-    
-
-    <div className={styles.parentContainer}>
+    <>
+    <main className={styles.parentContainer}>
       <div className={styles.answersContainer}>
         <div className={styles.question}><h3>{decisionData.question}</h3></div>
         {Object.entries(decisionData.options).map(([option, _]) => (
@@ -32,6 +32,8 @@ export default function ChildOne({ decisionData, onDecision, onPrevious }) {
           Next
         </button>
       </div>
-    </div>
+    </main>
+    <div className={styles.navBar}><NavBar/></div>
+    </>
   );
 }

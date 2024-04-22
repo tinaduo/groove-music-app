@@ -3,6 +3,8 @@ import ChildOne from './ChildOne';
 import ChildTwo from './ChildTwo';
 import quizData from './QuizData';
 import ProgressBar from '@/components/ProgressBar';
+import styles from '@/styles/ParentOne.module.css';
+
 
 export default function ParentOne() {
     const [currentId, setCurrentId] = useState('start');
@@ -40,7 +42,13 @@ export default function ParentOne() {
   
     return (
       <>
-         {currentNode.type !== 'result' && ( <ProgressBar progress={Math.round(currentProgress)}/>)}
+      <main className={styles.container}>
+        <div className={styles.title}>
+          <h1>Groove</h1>
+          <h2>Tunebox</h2>
+        </div>
+         <div className={styles.bar}>{currentNode.type !== 'result' && ( <ProgressBar progress={Math.round(currentProgress)}/>)}</div>
+      </main>
          {currentNode.type === 'decision' && (
          <ChildOne
           decisionData={currentNode}

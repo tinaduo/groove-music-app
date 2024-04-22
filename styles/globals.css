@@ -27,3 +27,8 @@
     margin: 0;
 }
 
+html {
+    background-color: black;
+    min-height: 932px;
+}
+
