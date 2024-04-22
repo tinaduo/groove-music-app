@@ -8,6 +8,11 @@
     src: url('/fonts/PPMonumentExtended-Regular.otf');
 }
 
+@font-face {
+    font-family: 'Lexend Bold';
+    src: url('public/fonts/Lexend-SemiBold.ttf');
+}
+
 
 .albumGrid {
     display: grid;
@@ -35,7 +40,7 @@
 }
 
 .songName {
-    font-family: 'Lexend';
+    font-family: 'Lexend Bold';
     font-weight: 400;
     font-size: var(--lexend-body);
 }
