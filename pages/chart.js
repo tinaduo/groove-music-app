@@ -1,6 +1,6 @@
 import styles from "@/styles/Chart.module.css";
 import PieChart from "@/components/PieChart";
-
+import Head from "next/head";
 
 export default function Chart() {
   return (
