@@ -58,8 +58,10 @@ export default function NewReview() {
                     <div key={song.id} className={`${styles.albumContainer}`}>
                         <div className={`${styles.albumItem}`}>
                             {song.album.images.length ? <img className={`${styles.songCover}`} width={"168px"} src={song.album.images[0].url} alt="" /> : <div>No Image</div>}
-                            <h3 className={`${styles.songName}`}>{song.name.length > MAX_TITLE_LENGTH ? `${song.name.substring(0, MAX_TITLE_LENGTH)}...` : song.name}</h3>
-                            <p className={`${styles.artistName}`}>{song.artists.map(artist => artist.name).join(", ")}</p>
+                            <div className={`${styles.textContainer}`}>
+                                <h3 className={`${styles.songName}`}>{song.name.length > MAX_TITLE_LENGTH ? `${song.name.substring(0, MAX_TITLE_LENGTH)}...` : song.name}</h3>
+                                <p className={`${styles.artistName}`}>{song.artists.map(artist => artist.name).join(", ")}</p>
+                            </div>
                         </div>
                     </div>
                 ))}

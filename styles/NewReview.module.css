@@ -56,6 +56,10 @@
     background: rgba(63, 63, 64, 0.25);
 }
 
+.textContainer:hover {
+    background: rgba(63, 63, 64, 0.25);
+}
+
 .searchBar {
     display: flex;
     width: 395px;
