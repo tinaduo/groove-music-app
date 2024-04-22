@@ -1,4 +1,5 @@
 
+
 .main {
   padding: 6rem;
   min-height: 852px;
@@ -10,37 +11,76 @@
   background-size: cover;
 }
 
-
 @font-face {
   font-family: 'Lexend';
   src: url('/fonts/Lexend-Light.ttf');
 }
 
 @font-face {
-  font-family: 'PP Monument Extended Light';
-  src: url('/fonts/PPMonumentExtended-Light.otf');
+  font-family: 'PP Monument Extended Regular';
+  src: url('/fonts/PPMonumentExtended-Regular.otf');
 }
 
 @font-face {
-  font-family: 'Lexend Semibold';
+  font-family: 'Lexend Bold';
   src: url('/fonts/Lexend-SemiBold.ttf');
 }
 
-.stuff h1 {
-  font-family: 'PP Monument Extended Light';
-  font-size: 40px;
-  margin-bottom: 5px;
-  margin-left: -53px;
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 6rem;
+  background-color: var(--background-black);
+  width: 430px;
+  height: 932px;
 }
 
-.stuff h2 {
-  margin-bottom: 40px;
-
+.grooveHeader {
+  display: flex;
+  font-size: 4rem;
+  color: var(--groovy-white);
+  font-family: 'PP Monument Extended Regular', Arial, Helvetica, sans-serif;
 }
 
+.headerContainer {
+  display: flex;
+  height: 200px;
+  align-items: center;
+}
 
+.spotifyButton {
+  display: flex;
+  font-family: 'Lexend Bold' , Arial, Helvetica, sans-serif;
+  color: var(--background-black);
+  text-decoration: none;
+  font-size: var(--lexend-body);
+  background-color: #1ed760;
+  cursor: pointer;
+  width: 243px;
+  height: 48px;
+  border-radius: 50px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-.navBar {
-  position: relative;
+.spotifybuttonContainer {
+  background-color: #1ed760;
+  cursor: pointer;
+  width: 243px;
+  height: 48px;
+  border-radius: 50px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.buttonContainer {
+  display: flex;
+  height: 700px;
+  align-items: center;
 }
 
