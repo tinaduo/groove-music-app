@@ -1,9 +1,6 @@
 import Head from "next/head";
 import styles from "@/styles/Home.module.css";
 import { useState, useEffect } from "react";
-import LottiePlayer from '@/components/LottiePlayer';
-
-
 
 export default function Home() {
   const CLIENT_ID = "22ed42382ae44ed69f8d3a6da1c6e077"
@@ -35,7 +32,6 @@ export default function Home() {
       </Head>
       <main className={`${styles.main}`}>
         <div className={`${styles.headerContainer}`}>
-          <LottiePlayer animationPath="@/public/animations/rotating_logo.json" width={250} />
         <h1 className={`${styles.grooveHeader}`}>GROOVE</h1>
         </div>
                 {!token ?
