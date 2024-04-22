@@ -1,0 +1,13 @@
+.progressBG {
+    width: 100%;
+    background-color: #e0e0e0;
+    border-radius: 40px;
+    margin: 0 auto;
+}
+
+.progressInner {
+    height: 10px;
+    background: #9e80f1;
+    transition: width 0.3s ease-in-out;
+    border-radius: 40px;
+}
