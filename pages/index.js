@@ -35,7 +35,7 @@ export default function Home() {
       </Head>
       <main className={`${styles.main}`}>
         <div className={`${styles.headerContainer}`}>
-          <LottiePlayer animationPath="./public/animations/rotating_logo.json" width={50%}/>
+          <LottiePlayer animationPath="./public/animations/rotating_logo.json" width={250}/>
         <h1 className={`${styles.grooveHeader}`}>GROOVE</h1>
         </div>
                 {!token ?
