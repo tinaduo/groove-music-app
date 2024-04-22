@@ -33,4 +33,5 @@
 .paragraph {
     font-size: var(--lexend-body);
     font-family: 'Lexend', Arial, Helvetica, sans-serif;
+    color: var(--groovy-white) ;
 }
