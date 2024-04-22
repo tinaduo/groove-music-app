@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 
 export default function Home() {
   const CLIENT_ID = "22ed42382ae44ed69f8d3a6da1c6e077"
-    const REDIRECT_URI = "http://localhost:3000/testing"
+    const REDIRECT_URI = "https://groove-app-mu.vercel.app/newreview"
     const AUTH_ENDPOINT = "https://accounts.spotify.com/authorize"
     const RESPONSE_TYPE = "token"
 
