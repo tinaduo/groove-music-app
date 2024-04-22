@@ -27,3 +27,6 @@
     margin: 0;
 }
 
+html {
+    background-color: var(--groovy-black); 
+}
