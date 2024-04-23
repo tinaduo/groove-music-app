@@ -19,7 +19,6 @@
     align-items: center;
     padding: 6rem;
     background-color: var(--background-black);
-    width: 430px;
     height: 932px;
 }
 
@@ -36,4 +35,10 @@
     font-family: 'Lexend', Arial, Helvetica, sans-serif;
     color: var(--groovy-white) ;
     padding: 10px;
+}
+
+.chartCanvas {
+    width: 400px;
+    height: 400px;
+    font-family: 'Lexend', Arial, Helvetica, sans-serif;
 }

@@ -78,7 +78,6 @@ export default function ChartPage() {
             data: {
                 labels,
                 datasets: [{
-                    data,
                     backgroundColor: [
                         'rgba(255, 99, 132, 0.6)',
                         'rgba(54, 162, 235, 0.6)',
@@ -87,6 +86,7 @@ export default function ChartPage() {
                         'rgba(153, 102, 255, 0.6)',
                         'rgba(255, 159, 64, 0.6)',
                     ],
+                    data,
                     borderWidth: 1,
                 }],
             },
@@ -110,7 +110,10 @@ export default function ChartPage() {
                 {token && (
                     <div className={styles.main}>
                         <h1 className={styles.grooveHeader}>Your Top Genres</h1>
-                        <canvas className={styles.paragraph} id="myChart" width="400" height="400"></canvas>
+                        <canvas 
+                            className={styles.chartCanvas}
+                            id="myChart"
+                        ></canvas>
                     </div>
                 )}
             </main>
