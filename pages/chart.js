@@ -8,7 +8,7 @@ const AUTH_ENDPOINT = "https://accounts.spotify.com/authorize";
 const RESPONSE_TYPE = "token";
 const SCOPES = "user-top-read";
 
-export default function Chart() {
+export default function ChartPage() {
     const [token, setToken] = useState("");
     const [topGenres, setTopGenres] = useState([]);
 
