@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import Chart from 'chart.js/auto';
 import styles from "@/styles/Chart.module.css";
 import Head from "next/head";
-import Link from 'react-router-dom';
+import Link from 'next/link';
 
 const CLIENT_ID = "22ed42382ae44ed69f8d3a6da1c6e077";
 const REDIRECT_URI = "https://groove-music-app.vercel.app/chart";
@@ -115,9 +115,9 @@ export default function ChartPage() {
                             className={styles.chartCanvas}
                             id="myChart"
                         ></canvas>
-                        <a
+                        <Link
                         href="/Quiz" 
-                        className={styles.buttonContainer}>Go to Tunebox</a>
+                        className={styles.buttonContainer}>Go to Tunebox</Link>
                     </div>
                 )}
             </main>
