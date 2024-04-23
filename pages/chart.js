@@ -52,9 +52,8 @@ export default function ChartPage() {
                     count,
                 }));
 
-                // Sort genres by count
                 const sortedGenres = genreArray.sort((a, b) => b.count - a.count);
-                setTopGenres(sortedGenres.slice(0, 10)); // Slice to keep only top 10 genres
+                setTopGenres(sortedGenres.slice(0, 10));
             } catch (error) {
                 console.error('Error fetching top genres:', error);
             }
@@ -77,7 +76,7 @@ export default function ChartPage() {
         new Chart(ctx, {
             type: 'pie',
             data: {
-                labels,
+                labels: xValues,
                 datasets: [{
                     data,
                     backgroundColor: [
