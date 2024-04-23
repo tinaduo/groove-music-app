@@ -115,11 +115,9 @@ export default function ChartPage() {
                             className={styles.chartCanvas}
                             id="myChart"
                         ></canvas>
-                        <Link to="/Quiz"
-                            className={styles.buttonContainer}
-                            >
-                                Go to Tunebox
-                        </Link>
+                        <a
+                        href="/Quiz" 
+                        className={styles.buttonContainer}>Go to Tunebox</a>
                     </div>
                 )}
             </main>
