@@ -14,7 +14,7 @@
   }
 
 .parentContainer {
-    background: var(--groovy-black);
+    background: var(--background-black);
     color: var(--groovy-white);
     display: flex;
     flex-direction: column;
