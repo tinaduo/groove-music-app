@@ -109,7 +109,7 @@ export default function ChartPage() {
                 )}
                 {token && (
                     <div className={styles.main}>
-                        <h1 className={style.genresHeader}>Your Top Genres</h1>
+                        <h1 className={styles.genresHeader}>Your Top Genres</h1>
                         <canvas 
                             className={styles.chartCanvas}
                             id="myChart"
