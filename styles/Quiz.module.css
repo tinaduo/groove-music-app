@@ -15,7 +15,7 @@
   }
 
 .parentContainer {
-    background: #000;
+    background: var(--background-black);
     color: #fff;
     display: flex;
     flex-direction: column;
@@ -55,7 +55,7 @@
 }
 
 .start {
-    background: #0E0F11;
+    background: var(--background-black);
     color: white;
     border: solid 2px #9e80f1;
     padding: 5px 16px;
