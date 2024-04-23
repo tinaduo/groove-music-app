@@ -76,7 +76,7 @@ export default function ChartPage() {
         new Chart(ctx, {
             type: 'pie',
             data: {
-                labels: xValues,
+                labels,
                 datasets: [{
                     data,
                     backgroundColor: [
