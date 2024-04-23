@@ -25,9 +25,10 @@
 
 .grooveHeader {
     display: flex;
-    font-size: 4rem;
+    font-size: 2rem;
     color: var(--groovy-white);
     font-family: 'PP Monument Extended Regular', Arial, Helvetica, sans-serif;
+    text-align: center;
 }
 
 .paragraph {
