@@ -23,7 +23,7 @@ export default function NavBar() {
           </Link>
         </li>
         <li>
-          <Link href="/NewPost" className={styles.text}>
+          <Link href="/newreview" className={styles.text}>
             <div className={styles.link}>
               <Image src="/images/newPost.svg" alt="Home" width={30} height={30} />
               <span>New Post</span>
