@@ -26,43 +26,6 @@ export default function ChartPage() {
     }, []);
 
     useEffect(() => {
-        const fetchTopArtistsByGenre = async () => {
-            try {
-                if (!token) return;
-
-                const response = await fetch('https://api.spotify.com/v1/me/top/artists', {
-                    headers: {
-                        Authorization: `Bearer ${token}`
-                    }
-                });
-
-                if (!response.ok) {
-                    throw new Error('Failed to fetch data');
-                }
-
-                const data = await response.json();
-                const genreArtistsMap = {};
-
-                data.items.forEach(artist => {
-                    artist.genres.forEach(genre => {
-                        if (!genreArtistsMap[genre]) {
-                            genreArtistsMap[genre] = [];
-                        }
-                        genreArtistsMap[genre].push(artist.name);
-                    });
-                });
-
-                setGenreArtists(Object.entries(genreArtistsMap));
-            } catch (error) {
-                console.error('Error fetching top artists by genre:', error);
-            }
-        };
-
-        fetchTopArtistsByGenre();
-    }, [token]);
-
-
-    useEffect(() => {
         const fetchTopGenres = async () => {
             try {
                 if (!token) return;
@@ -108,7 +71,7 @@ export default function ChartPage() {
     const renderPieChart = () => {
         const ctx = document.getElementById('myChart');
         const labels = topGenres.map(genre => genre.genre);
-        const data = genreArtists.map(([_, artists]) => artists.length);
+        const data = topGenres.map(genre => genre.count);
 
         new Chart(ctx, {
             type: 'pie',
