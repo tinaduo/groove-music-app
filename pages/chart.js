@@ -93,6 +93,10 @@ export default function ChartPage() {
         });
     };
 
+      const navigateToQuizOne = () => {
+    router.push('./ParentOne');
+  };
+
     return (
         <>
             <Head>
@@ -114,7 +118,12 @@ export default function ChartPage() {
                             className={styles.chartCanvas}
                             id="myChart"
                         ></canvas>
-                        <button className={styles.buttonContainer}>Go to Tunebox</button>
+                        <button
+                            className={styles.buttonContainer}
+                            onClick={navigateToQuizOne}
+                            >
+                                Go to Tunebox
+                        </button>
                     </div>
                 )}
             </main>
