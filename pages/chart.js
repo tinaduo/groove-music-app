@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 import Chart from 'chart.js/auto';
-import styles from "@/styles/Chart.module.css";
+import styles from "@/styles/NewReview.module.css";
 
 const CLIENT_ID = "22ed42382ae44ed69f8d3a6da1c6e077";
-const REDIRECT_URI = "https://groove-music-app.vercel.app/chart";
+const REDIRECT_URI = "https://groove-music-app.vercel.app/newreview";
 const AUTH_ENDPOINT = "https://accounts.spotify.com/authorize";
 const RESPONSE_TYPE = "token";
 const SCOPES = "user-top-read";
@@ -51,8 +51,9 @@ export default function ChartPage() {
                     count,
                 }));
 
+                // Sort genres by count
                 const sortedGenres = genreArray.sort((a, b) => b.count - a.count);
-                setTopGenres(sortedGenres);
+                setTopGenres(sortedGenres.slice(0, 10)); // Slice to keep only top 10 genres
             } catch (error) {
                 console.error('Error fetching top genres:', error);
             }
