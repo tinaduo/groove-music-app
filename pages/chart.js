@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import Chart from 'chart.js/auto';
 import styles from "@/styles/Chart.module.css";
 import Head from "next/head";
-import tuneboxButton from '@/components/Button'
 
 const CLIENT_ID = "22ed42382ae44ed69f8d3a6da1c6e077";
 const REDIRECT_URI = "https://groove-music-app.vercel.app/chart";
