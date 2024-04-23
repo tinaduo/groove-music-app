@@ -1,6 +1,6 @@
-import styles from './ProgressBar.module.css';
+import styles from './Button.module.css';
 
-export function tuneboxButton() {
+export default function tuneboxButton() {
     return (
       <div className={styles.tuneboxButton}>
         <p className={styles.buttonText}>Go to Tunebox</p>
