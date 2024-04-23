@@ -9,8 +9,6 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "chart.js": "^4.4.2",
-    "react-chartjs-2": "^5.2.0",
     "axios": "^1.6.8",
     "chart.js": "^4.4.2",
     "dotenv": "^16.4.5",
@@ -21,6 +19,7 @@
     "react-chartjs-2": "^5.2.0",
     "react-dom": "^18",
     "react-lottie": "^1.2.4",
+    "react-router-dom": "^6.23.0",
     "spotify-web-api-node": "^5.0.2"
   }
 }
