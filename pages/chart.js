@@ -4,7 +4,7 @@ import styles from "@/styles/Chart.module.css";
 import Head from "next/head";
 
 const CLIENT_ID = "22ed42382ae44ed69f8d3a6da1c6e077";
-const REDIRECT_URI = "https://groove-music-app.vercel.app/newreview";
+const REDIRECT_URI = "https://groove-music-app.vercel.app/chart";
 const AUTH_ENDPOINT = "https://accounts.spotify.com/authorize";
 const RESPONSE_TYPE = "token";
 const SCOPES = "user-top-read";
