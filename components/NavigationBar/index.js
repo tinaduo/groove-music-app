@@ -17,7 +17,7 @@ export default function NavBar() {
         <li>
           <Link href="/Quiz" className={styles.text}>
             <div className={styles.link}>
-              <Image src="/images/quiz.svg" alt="Home" width={30} height={30} />
+              <Image src="/images/quiz.svg" alt="Quiz" width={30} height={30} />
               <span>Tunebox</span>
             </div>
           </Link>
@@ -25,7 +25,7 @@ export default function NavBar() {
         <li>
           <Link href="/newreview" className={styles.text}>
             <div className={styles.link}>
-              <Image src="/images/newPost.svg" alt="Home" width={30} height={30} />
+              <Image src="/images/newPost.svg" alt="New Post" width={30} height={30} />
               <span>New Post</span>
             </div>
           </Link>
@@ -33,7 +33,7 @@ export default function NavBar() {
         <li>
           <Link href="/Activity" className={styles.text}>
             <div className={styles.link}>
-              <Image src="/images/activity.svg" alt="Home" width={30} height={30} />
+              <Image src="/images/activity.svg" alt="Activity" width={30} height={30} />
               <span>Activity</span>
             </div>
           </Link>
@@ -41,7 +41,7 @@ export default function NavBar() {
         <li>
           <Link href="/Profile" className={styles.text}>
             <div className={styles.link}>
-              <Image src="/images/profile.svg" alt="Home" width={30} height={30} />
+              <Image src="/images/profile.svg" alt="Profile" width={30} height={30} />
               <span>Profile</span>
             </div>
           </Link>
