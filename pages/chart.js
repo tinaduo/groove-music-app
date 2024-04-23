@@ -95,7 +95,7 @@ export default function ChartPage() {
     return (
         <main className={styles.main}>
             {!token && (
-                <a href={`${AUTH_ENDPOINT}?client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URI}&response_type=${RESPONSE_TYPE}&scope=${SCOPES}`}>
+                <a  className={styles.paragraph} href={`${AUTH_ENDPOINT}?client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URI}&response_type=${RESPONSE_TYPE}&scope=${SCOPES}`}>
                     Login to Spotify
                 </a>
             )}
