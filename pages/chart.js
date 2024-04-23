@@ -115,7 +115,6 @@ export default function ChartPage() {
                             className={styles.chartCanvas}
                             id="myChart"
                         ></canvas>
-                        <tuneboxButton/>
                     </div>
                 )}
             </main>
