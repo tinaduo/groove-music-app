@@ -56,7 +56,7 @@
 
 .submitButton:focus {
     background: var(--groovy-purple-light);
-    border: solid 4px var(--groovy-purple);
+    border: solid 4px var(--groovy-purple-light);
     color:var(--groovy-black);
 }
 
