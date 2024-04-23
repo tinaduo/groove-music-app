@@ -22,11 +22,11 @@
     height: 932px;
 }
 
-.grooveHeader {
+.genresHeader {
     display: flex;
-    font-size: 2rem;
+    font-size: var(--lexend-header);
     color: var(--groovy-white);
-    font-family: 'PP Monument Extended Regular', Arial, Helvetica, sans-serif;
+    font-family: 'Lexend', Arial, Helvetica, sans-serif;
     text-align: center;
 }
 

@@ -1,0 +1,31 @@
+@font-face {
+  font-family: 'Lexend';
+  src: url('/fonts/Lexend-Light.ttf');
+}
+
+@font-face {
+  font-family: 'PP Monument Extended Regular';
+  src: url('/fonts/PPMonumentExtended-Regular.otf');
+}
+
+@font-face {
+  font-family: 'Lexend Bold';
+  src: url('/fonts/Lexend-SemiBold.ttf');
+}
+
+.tuneboxButton {
+    width: 158px;
+    height: 45px;
+    top: 818px;
+    left: 134px;
+    padding: 13px 22px 12px 20px;
+    gap: 8px;
+    border-radius: 29.5px;
+    border: 3px;
+}
+
+.buttonText {
+    font-family: 'Lexend Bold' , Arial, Helvetica, sans-serif;
+    font-size: var(--lexend-body);
+    color: var(--groovy-white);
+}

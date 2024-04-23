@@ -28,7 +28,6 @@
 }
 
 html {
-    background-color: black;
     min-height: 932px;
     background-color: var(--background-black); 
 }

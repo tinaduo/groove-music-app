@@ -1,16 +1,3 @@
-
-
-.main {
-  padding: 6rem;
-  min-height: 852px;
-  width: 430px;
-  margin: 0 auto;
-  background: black;
-  color: white;
-  font-family: 'Lexend';
-  background-size: cover;
-}
-
 @font-face {
   font-family: 'Lexend';
   src: url('/fonts/Lexend-Light.ttf');
@@ -54,7 +41,8 @@
   font-family: 'Lexend Bold' , Arial, Helvetica, sans-serif;
   color: var(--background-black);
   text-decoration: none;
-  font-size: var(--lexend-body);
+
+
   background-color: #1ed760;
   cursor: pointer;
   width: 243px;
