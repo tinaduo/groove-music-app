@@ -50,13 +50,12 @@
     color: var(--groovy-white);
     width: 158px;
     height: 45px;
-    top: 818px;
-    left: 134px;
     padding: 13px 22px 12px 20px;
-    gap: 8px;
     border-radius: 29.5px;
     border: 3px solid var(--groovy-white);
     margin-top: 150px;
+    text-align: center;
+    text-decoration: none;
 }
 
 .buttonContainer:hover {
