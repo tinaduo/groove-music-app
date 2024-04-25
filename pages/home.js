@@ -9,7 +9,6 @@ export default function Main() {
             <main className={styles.parentContainer}>
                 <header className={styles.header}>
                     <div className={styles.logo}>
-                        <Lottie options={defaultOptions} height={313} width={313} />
                     </div>
                 </header>
             </main>
