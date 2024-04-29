@@ -1,6 +1,16 @@
 import React from 'react';
 import LottiePlayer from '@/components/LottiePlayer';
-import styles from '@/styles/ChildTwo.module.css'
+import styles from '@/styles/ChildTwo.module.css';
+import dynamic from 'next/dynamic';
+
+
+const Lottie = dynamic(() => import('react-lottie'), { ssr: false });
+
+const defaultOptions = {
+  loop: true,
+  autoplay: true,
+  animationData: require('/public/animations/rotating_logo.json'),
+};
 
 export default function ChildTwo({ result, lottiePath, buttonLink, chip}) {
   return (
@@ -12,7 +22,12 @@ export default function ChildTwo({ result, lottiePath, buttonLink, chip}) {
         ))}
       </div>
       <div className={styles.test}>
-        <LottiePlayer animationPath={lottiePath} width={290} height={480}/>
+        <div className={styles.character}>
+          <LottiePlayer animationPath={lottiePath} width={290} height={480}/>
+        </div>
+        <div className={styles.logo}>
+          <Lottie options={defaultOptions} height={300} width={300}/>
+        </div>
       </div>
       <div className={styles.groove}>
         <h2>{result}</h2>

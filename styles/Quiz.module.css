@@ -14,6 +14,13 @@
     src: url('/fonts/Lexend-SemiBold.ttf');
   }
 
+  .mainContainer {
+    background: var(--background-black);
+    width: 430px;
+    margin: 0 auto;
+    background-size: cover;
+}
+
 .parentContainer {
     background: var(--background-black);
     color: #fff;
@@ -22,7 +29,19 @@
     align-items: center;
     justify-content: center;
     position: static;
-    min-height: 852px;
+    min-height: 766px;
+}
+
+.groove h1 {
+    font-size: 40px;
+    color: var(--groovy-white);
+    font-family: 'PP Monument Extended Light';
+    padding-top: 30px;
+}
+
+.groove {
+    background: var(--background-black);
+    border: solid var(--background-black) 2px;
 }
 
 .header {

@@ -44,7 +44,7 @@ export default function ParentOne() {
       <>
       <main className={styles.container}>
         <div className={styles.title}>
-          <h1>Groove</h1>
+          <h1>GROOVE</h1>
           <h2>Tunebox</h2>
         </div>
          <div className={styles.bar}>{currentNode.type !== 'result' && ( <ProgressBar progress={Math.round(currentProgress)}/>)}</div>
