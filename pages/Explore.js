@@ -21,9 +21,14 @@ export default function Explore() {
   ]
 
   return (
+  <>
     <main className={styles.container}>
-      <CarouselComponent images={images} />
-      <div>{postcards}</div>
+      <div  className={styles.scroll}>
+        <CarouselComponent images={images} />
+        <div>{postcards}</div>
+      </div>
     </main>
+    <NavBar/>
+  </>
   );
 }
