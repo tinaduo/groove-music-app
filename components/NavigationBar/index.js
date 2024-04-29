@@ -7,7 +7,7 @@ export default function NavBar() {
     <header className={styles.header}>
       <ul className={styles.list}>
         <li>
-          <Link href="/" className={styles.text}>
+          <Link href="/Explore" className={styles.text}>
             <div className={styles.link}>
               <Image src="/images/homeButton.svg" alt="Home" width={30} height={30} />
               <span>Home</span>

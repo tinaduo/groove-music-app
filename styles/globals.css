@@ -32,3 +32,6 @@ html {
     min-height: 932px;
     background-color: var(--background-black); 
 }
+
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
