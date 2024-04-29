@@ -1,7 +1,10 @@
 import { useState, useEffect } from "react";
+import { useRouter } from "next/router";
 import styles from "@/styles/NewReview.module.css";
 
 export default function NewReview() {
+    const router = useRouter();
+
     const CLIENT_ID = "22ed42382ae44ed69f8d3a6da1c6e077";
     const REDIRECT_URI = "https://groove-music-app.vercel.app/newreview";
     const AUTH_ENDPOINT = "https://accounts.spotify.com/authorize";
@@ -10,6 +13,18 @@ export default function NewReview() {
     const [token, setToken] = useState("");
     const [searchKey, setSearchKey] = useState("");
     const [songs, setSongs] = useState([]);
+
+    const handleSongClick = (song) => {
+        router.push({
+            pathname: '/review',
+            query: {
+                name: song.name,
+                artists: song.artists.map(artist => artist.name).join(','),
+                albumImage: song.album.images.length ? song.album.images[0].url : ''
+            },
+        });
+    };
+
 
     useEffect(() => {
         const hashParams = window.location.hash.substr(1).split("&").reduce(function (result, item) {
@@ -55,7 +70,7 @@ export default function NewReview() {
         return (
             <div className={`${styles.albumGrid}`}>
                 {songs.map(song => (
-                    <div key={song.id} className={`${styles.albumContainer}`}>
+                    <div key={song.id} className={`${styles.albumContainer}`} onClick={() => handleSongClick(song)}>
                         <div className={`${styles.albumItem}`}>
                             {song.album.images.length ? <img className={`${styles.songCover}`} width={"168px"} src={song.album.images[0].url} alt="" /> : <div>No Image</div>}
                             <div className={`${styles.textContainer}`}>

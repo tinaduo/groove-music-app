@@ -1,18 +1,17 @@
-
 @font-face {
     font-family: 'Lexend';
     src: url('/fonts/Lexend-Light.ttf');
-  }
-  
-  @font-face {
+}
+
+@font-face {
     font-family: 'PP Monument Extended Light';
     src: url('/fonts/PPMonumentExtended-Light.otf');
-  }
-  
-  @font-face {
+}
+
+@font-face {
     font-family: 'Lexend Semibold';
     src: url('/fonts/Lexend-SemiBold.ttf');
-  }
+}
 
   .mainContainer {
     background: var(--background-black);
@@ -57,7 +56,7 @@
 .welcome {
     font-family: 'PP Monument Extended Light', 'PP Monument Extended Light';
     width: 300px;
-    margin-bottom: 20px; 
+    margin-bottom: 20px;
     margin-top: 30px;
 
 }
@@ -79,7 +78,8 @@
     border: solid 2px #9e80f1;
     padding: 5px 16px;
     border-radius: 12px;
-    margin-top: 20px;;
+    margin-top: 20px;
+    ;
 }
 
 .navBar {

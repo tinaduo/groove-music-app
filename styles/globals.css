@@ -1,9 +1,9 @@
 :root {
 /* COLOR STYLES */
 --groovy-purple: rgba(158, 128, 241, 1);
---groovy-purple-light: #C8BAF8;
---groovy-red: rgba(220, 119, 85, 1);
---groovy-yellow: rgba(246, 198, 92, 1);
+--groovy-purple-light: rgb(200, 186, 248);
+--groovy-red: rgb(220, 119, 85);
+--groovy-yellow: rgb(246, 198, 92);
 --groovy-black: rgba(0, 0, 0, 1);
 --groovy-white: rgba(255, 255, 255, 1);
 --unselected-icongrey: rgba(125, 126, 128, 1);
@@ -32,3 +32,6 @@ html {
     min-height: 932px;
     background-color: var(--background-black); 
 }
+
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";

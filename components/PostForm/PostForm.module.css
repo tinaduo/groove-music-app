@@ -51,14 +51,13 @@
 }
 
 .datePicker {
-    color-scheme: dark;
+    background-color: #363739;
+    color: white;
     font-family: 'Lexend', sans-serif;
     font-size: var(--lexend-body);
     width: 150px;
     height: 35px;
-    top: 29px;
     padding: 10px 13px 10px 13px;
-    gap: 8px;
     border-radius: 5px;
     border: none;
 }
@@ -105,4 +104,8 @@
 .inputscontainer {
     display: flex;
     justify-content: space-between;
+}
+
+.stars {
+    height: 35px;
 }
