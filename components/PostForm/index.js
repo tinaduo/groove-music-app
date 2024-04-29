@@ -36,10 +36,11 @@ export function PostForm() {
                     className={styles.headers}
                     for="rating">Rating</label>
                 <br />
-                 <ReactStars 
-                    count={5} 
-                    size={35} 
-                    color2={'#ffd700'} />
+                <ReactStars
+                    className={styles.stars} 
+                    count={5}
+                    size={35}
+                    color2={'#f6c65c'} />
                 <label
                     className={styles.headers}
                     for="title">Title</label>
