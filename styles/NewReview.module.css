@@ -36,6 +36,7 @@
     align-items: center;
     padding: 2rem;
     background-color: var(--background-black);
+    min-height: 876px;
 }
 
 .songName {
@@ -89,4 +90,12 @@
 
 .searchBar:focus {
     border: 2px solid #9E80F1;
+}
+
+.errorMessage {
+    color: var(--groovy-white);
+    font-family: 'Lexend Bold';
+    font-weight: 400;
+    font-size: var(--lexend-body);
+    padding: 280px;
 }

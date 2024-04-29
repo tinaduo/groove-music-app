@@ -107,7 +107,7 @@ export default function NewReview() {
                     />
                 </form>
             }
-            {songs.length > 0 ? renderSongs() : <h2>No songs found</h2>}
+            {songs.length > 0 ? renderSongs() : <h2 className={`${styles.errorMessage}`}>No songs found</h2>}
         </main>
     );
 }
