@@ -42,7 +42,7 @@ export default function ReviewPage() {
                 <div className={styles.colourBackground} style={{ background: gradientColor }}>
                     <div className={styles.albumdataContainer}>
                         <div className={styles.backbuttonContainer}>
-                            <Link href="/Activity"
+                            <Link
                                 className={styles.backbuttonLink}
                                 href="https://groove-music-app.vercel.app/newreview">
                             <svg className={styles.backButton} width="50" height="18" viewBox="0 0 50 18" fill="none" xmlns="http://www.w3.org/2000/svg">
