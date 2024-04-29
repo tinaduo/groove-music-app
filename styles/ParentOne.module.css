@@ -1,6 +1,6 @@
 .title h1 {
     font-family: 'PP Monument Extended Light';
-    color: white;
+    color: var(--groovy-white);
     padding-top: 30px;
     font-size: 40px;
     /*margin-left: 40px;*/
@@ -8,23 +8,23 @@
 
 .title h2 {
     font-family: 'Lexend';
-    color: white;
+    color: var(--groovy-white);
     margin-bottom: 40px;
     margin-top: 5px;
     /*margin-left: 43px;*/
 }
 
 .title {
-    background: black;
-    border: solid black 2px;
+    background: var(--background-black);
+    border: solid var(--background-black) 2px;
 }
 
 .bar {
-    background: black;
+    background: var(--groovy-black);
 }
 
 .container {
-    background: black;
+    background: var(--background-black);
     width: 430px;
     margin: 0 auto;
     background-size: cover;
