@@ -5,12 +5,12 @@ import Head from "next/head";
 import Link from 'next/link';
 
 const CLIENT_ID = "22ed42382ae44ed69f8d3a6da1c6e077";
-const REDIRECT_URI = "https://groove-music-app.vercel.app/chart";
+const REDIRECT_URI = "https://groove-music-app.vercel.app/stats";
 const AUTH_ENDPOINT = "https://accounts.spotify.com/authorize";
 const RESPONSE_TYPE = "token";
 const SCOPES = "user-top-read";
 
-export default function ChartPage() {
+export default function StatsPage() {
     const [token, setToken] = useState("");
     const [topGenres, setTopGenres] = useState([]);
 

@@ -4,9 +4,9 @@ import styles from "@/styles/NewReview.module.css";
 
 export default function NewReview() {
     const router = useRouter();
-    
+
     const CLIENT_ID = "22ed42382ae44ed69f8d3a6da1c6e077";
-    const REDIRECT_URI = "http://localhost:3000/newreview";
+    const REDIRECT_URI = "https://groove-music-app.vercel.app/newreview";
     const AUTH_ENDPOINT = "https://accounts.spotify.com/authorize";
     const RESPONSE_TYPE = "token";
 
@@ -14,16 +14,16 @@ export default function NewReview() {
     const [searchKey, setSearchKey] = useState("");
     const [songs, setSongs] = useState([]);
 
-  const handleSongClick = (song) => {
-    router.push({
-      pathname: '/review',
-      query: {
-        name: song.name,
-        artists: song.artists.map(artist => artist.name).join(','),
-        albumImage: song.album.images.length ? song.album.images[0].url : ''
-      },
-    });
-  };
+    const handleSongClick = (song) => {
+        router.push({
+            pathname: '/review',
+            query: {
+                name: song.name,
+                artists: song.artists.map(artist => artist.name).join(','),
+                albumImage: song.album.images.length ? song.album.images[0].url : ''
+            },
+        });
+    };
 
 
     useEffect(() => {
