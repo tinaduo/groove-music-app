@@ -36,6 +36,7 @@
     align-items: center;
     padding: 2rem;
     background-color: var(--background-black);
+    min-height: 876px;
 }
 
 .songName {
