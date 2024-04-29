@@ -9,11 +9,9 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "chart.js": "^4.4.2",
-    "react-chartjs-2": "^5.2.0",
     "axios": "^1.6.8",
     "chart.js": "^4.4.2",
-    "colorthief": "^2.4.0",
+    "colorthief": "^2.2.0",
     "dotenv": "^16.4.5",
     "next": "14.1.4",
     "next-auth": "^4.24.7",
@@ -23,6 +21,7 @@
     "react-dom": "^18",
     "react-lottie": "^1.2.4",
     "react-router-dom": "^6.23.0",
+    "react-stars": "^2.2.5",
     "spotify-web-api-node": "^5.0.2"
   }
 }

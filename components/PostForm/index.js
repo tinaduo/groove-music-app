@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import styles from "./PostForm.module.css";
+import ReactStars from 'react-stars'
 
 export function PostForm() {
     const [title, setTitle] = useState('');
@@ -31,6 +32,14 @@ export function PostForm() {
     return (
         <form className={styles.postForm} onSubmit={handleSubmit}>
             <div className={styles.container}>
+                <label
+                    className={styles.headers}
+                    for="rating">Rating</label>
+                <br />
+                 <ReactStars 
+                    count={5} 
+                    size={35} 
+                    color2={'#ffd700'} />
                 <label
                     className={styles.headers}
                     for="title">Title</label>
