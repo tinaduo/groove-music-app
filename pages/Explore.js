@@ -4,6 +4,7 @@ import NavBar from '@/components/NavigationBar';
 import Postcard from '../components/Postcard';
 import reviewData from '../data/ReviewData';
 import CarouselComponent from '@/components/HorizontalScroll/HorizontalScroll';
+import NavBar from '@/components/NavigationBar';
 
 export default function Explore() {
   const postcards = reviewData.map((review, index) => (
@@ -24,6 +25,7 @@ export default function Explore() {
     <main className={styles.container}>
       <CarouselComponent images={images} />
       <div>{postcards}</div>
+      </NavBar>
     </main>
   );
 }
