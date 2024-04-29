@@ -41,7 +41,7 @@ export function PostForm() {
                     count={5}
                     size={35}
                     color2={'#f6c65c'}
-                    char={★}/>
+                    char={'★'}/>
                 <label
                     className={styles.headers}
                     for="title">Title</label>
