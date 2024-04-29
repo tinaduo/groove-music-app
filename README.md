@@ -12,4 +12,4 @@ Your music app is a socially driven platform designed for music reviewing, where
 - npm install --save react-lottie
 - npm prop-types 
 - npm install chart.js react-chartjs-2
--npm install colorthief
+- npm install colorthief
