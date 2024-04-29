@@ -1,7 +1,7 @@
-export default function NewReview() {
+export default function Activity() {
 
     return (
-        <main className={`${styles.main}`}>
+        <main>
         </main>
     );
 }
