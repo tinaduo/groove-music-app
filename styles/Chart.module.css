@@ -34,6 +34,7 @@
     font-family: 'Lexend', Arial, Helvetica, sans-serif;
     color: var(--groovy-white) ;
     padding: 10px;
+    width: 405px;
 }
 
 .chartCanvas {
