@@ -90,3 +90,10 @@
 .searchBar:focus {
     border: 2px solid #9E80F1;
 }
+
+.errorMessage {
+    color: var(--groovy-white);
+    font-family: 'Lexend Bold';
+    font-weight: 400;
+    font-size: var(--lexend-body);
+}
