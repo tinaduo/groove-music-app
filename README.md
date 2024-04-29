@@ -13,3 +13,5 @@ Your music app is a socially driven platform designed for music reviewing, where
 - npm prop-types 
 - npm install chart.js react-chartjs-2
 - npm install colorthief
+- npm install react-slick slick-carousel
+
