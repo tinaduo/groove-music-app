@@ -39,7 +39,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 37px;
 }
 
 .dataContainer {
@@ -66,4 +65,5 @@
     width: 405px;
     margin-top: 67px;
     margin-left: 12px;
+    margin-bottom: 37px;;
 }
