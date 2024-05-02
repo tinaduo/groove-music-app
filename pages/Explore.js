@@ -11,21 +11,21 @@ export default function Explore() {
   ));
 
   const images = [
-    {src: '/images/sos2.png',
-    name: 'sos'},
-    {src: '/images/wurli2.png'},
-    {src: '/images/trilogy2.png'},
-    {src: '/images/freudian.png'},
-    {src: '/images/youth.png'},
-    {src: '/images/mood.png'}
+    {src: '/images/sos2.png', subtitle: 'SOS', artist: 'SZA'},
+    {src: '/images/wurli2.png', subtitle:'Wurli', artist: 'Dominic Fike'},
+    {src: '/images/trilogy2.png', subtitle: 'Trilogy', artist: 'The Weeknd'},
+    {src: '/images/freudian.png', subtitle: 'Freudian', artist: 'Daniel Caesar'},
+    {src: '/images/youth.png', subtitle: "Youth of Today", artist: 'Musical Youth'},
+    {src: '/images/mood.png', subtitle: "130 Mood: TRBL", artist: 'DEAN'}
   ]
 
   return (
   <>
     <main className={styles.container}>
       <div  className={styles.scroll}>
+      <div className={styles.groove}><h1>GROOVE</h1></div>
         <CarouselComponent images={images} />
-        <div>{postcards}</div>
+        <div className={styles.cards}>{postcards}</div>
       </div>
     </main>
     <NavBar/>

@@ -1,3 +1,18 @@
+@font-face {
+  font-family: 'Lexend';
+  src: url('/fonts/Lexend-Light.ttf');
+}
+
+@font-face {
+  font-family: 'PP Monument Extended Light';
+  src: url('/fonts/PPMonumentExtended-Light.otf');
+}
+
+@font-face {
+  font-family: 'Lexend Semibold';
+  src: url('/fonts/Lexend-SemiBold.ttf');
+}
+
 .container {
   background: var(--background-black);
   color: #fff;
@@ -9,10 +24,16 @@
   min-height: 766px;
 }
 
+.cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .scroll {
   overflow-y: scroll;
   overflow-x: hidden;
-  height: 857px;
+  height: 855px;
 }
 
 .scroll::-webkit-scrollbar {
@@ -29,4 +50,18 @@
  
 .scroll:hover::-webkit-scrollbar-thumb {
   background-color: #888;
+}
+
+.groove h1 {
+  font-size: 40px;
+  color: var(--groovy-white);
+  font-family: 'PP Monument Extended Light';
+  padding-top: 30px;
+}
+
+.groove {
+  border: solid var(--background-black) 2px;
+  display: flex;
+  width: 428px;
+  margin-right: -3px;
 }

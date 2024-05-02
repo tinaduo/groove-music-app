@@ -24,3 +24,24 @@
     margin-bottom: 20px;
     font-family: 'Lexend';
 }
+
+.test2 {
+  display: flex;
+  justify-content: center;
+}
+
+.subtitle {
+  color: var(--groovy-white, #FFF);
+  font-size: 13px;
+  margin-top: 2px;
+  font-family: 'Lexend Semibold';
+  text-align: center;
+}
+
+.artist {
+  color: var(--groovy-white, #FFF);
+  font-size: 13px;
+  margin-top: 2px;
+  font-family: 'Lexend';
+  text-align: center
+}

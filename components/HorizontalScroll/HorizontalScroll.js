@@ -14,12 +14,14 @@ const CarouselComponent = ({ images, name }) => {
   };
 
   return (
-    <div className={styles.test} style={{ maxWidth: '410px', margin: 'auto' }}>
+    <div className={styles.test} style={{ maxWidth: '350px', margin: 'auto', }}>
         <h4>popular this week</h4>
       <Slider {...settings}>
         {images.map((image) => (
           <div className={styles.test2}>
-            <img src={image.src} style={{ width: '95px', height: '95px', color: 'white', gap: '10px'}} />
+            <img src={image.src} style={{ width: '112px', height: '112px', }}/>
+            <div className={styles.subtitle}>{image.subtitle}</div>
+            <div className={styles.artist}>{image.artist}</div>
           </div>
         ))}
       </Slider>
