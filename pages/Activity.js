@@ -1,7 +1,7 @@
-export default function Activity() {
+/**export default function Activity() {
 
     return (
         <main>
         </main>
     );
-}
+} */

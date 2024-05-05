@@ -1,0 +1,195 @@
+@font-face {
+    font-family: 'Lexend';
+    src: url('/fonts/Lexend-Light.ttf');
+}
+
+@font-face {
+    font-family: 'PP Monument Extended Light';
+    src: url('/fonts/PPMonumentExtended-Light.otf');
+}
+
+@font-face {
+    font-family: 'Lexend Semibold';
+    src: url('/fonts/Lexend-SemiBold.ttf');
+}
+
+@font-face {
+    font-family: 'Lexend Thin';
+    src: url('/fonts/Lexend-Thin.ttf');
+}
+
+@font-face {
+    font-family: 'PP Monument Extended Regular';
+    src: url('/fonts/PPMonumentExtended-Regular.otf');
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.secondContainer {
+    width: 430px;
+    height: 932px;
+    background: #202020;;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+
+}
+
+.screenshot1 {
+    width: 220px;
+    height: 450px;
+    position: absolute;
+    top: 25%; 
+    left: 7%; 
+    z-index: 2;
+}
+
+.title {
+    position: absolute;
+    justify-content: center;
+    margin-top: 45%;
+    text-align: center;
+    color: white;
+    z-index: 2;
+    font-family: 'PP Monument Extended Regular';
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.logo {
+    width: 350px;
+    height: 380px;
+    margin-top: -400px;
+    position: absolute;
+    top: 72%;
+    left: 18%;
+    z-index: 1;
+}
+
+.logo img {
+    height: 450px;
+    width: 350px;
+    filter: blur(15px);
+}
+
+.logo2 {
+    width: 350px;
+    height: 380px;
+    margin-top: -400px;
+    position: absolute;
+    top: 38%;
+    right: 20%;
+    z-index: 1;
+}
+
+.logo2 img {
+    height: 450px;
+    width: 350px;
+    filter: blur(15px);
+}
+
+.blackBG {
+    width: 430px;
+    height: 343px;
+    background: black;
+    color: #fff;
+    margin-top: auto;
+    z-index: 3;
+    text-align: left;
+    padding: 20px 30px;
+}
+
+.character {
+    position: absolute;
+    top: 340px;
+    right: -9px;
+    z-index: 4;
+}
+
+.blackBG h2 {
+    font-family: 'Lexend';
+}
+
+.text {
+    margin-top: 20px;
+    font-size: 16px;
+    font-family: 'Lexend Thin';
+}
+
+.next {
+    font-size: 20px;
+    font-family: Lexend;
+    color: #AEACAC;
+    margin-top: 60px;
+    display: flex;
+    flex-direction: row;
+    column-gap: 15px;
+    justify-content: right;
+    align-items: center;
+    width: 130px;
+}
+
+.link {
+    text-decoration: none;
+}
+
+.back {
+    font-size: 20px;
+    font-family: Lexend;
+    color: #AEACAC;
+    margin-top: 60px;
+    display: flex;
+    flex-direction: row;
+    column-gap: 15px;
+    justify-content: left;
+    align-items: center;
+    width: 100px;
+}
+
+.navigation {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.circle {
+    display: flex;
+    flex-direction: row;
+    column-gap: 14px;
+    margin-top: 50px;
+}
+
+.circle :nth-child(1) {
+    width: 11px;
+    height: 11px;
+    border-radius: 10px;
+    background: #D9D9D9;
+}
+
+.circle :nth-child(2) {
+    width: 11px;
+    height: 11px;
+    border-radius: 10px;
+    background: #D9D9D9;
+}
+
+.circle :nth-child(3) {
+    width: 11px;
+    height: 11px;
+    border-radius: 10px;
+    background: #D9D9D9;;
+}
+
+.circle :nth-child(4) {
+    width: 24px;
+    height: 11px;
+    border-radius: 10px;
+    background: #9E80F1;
+}
