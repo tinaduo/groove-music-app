@@ -89,7 +89,7 @@
 .blackBG {
     width: 430px;
     height: 343px;
-    background: black;
+    background: var(--background-black);
     color: #fff;
     margin-top: auto;
     z-index: 3;

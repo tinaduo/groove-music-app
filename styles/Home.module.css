@@ -18,7 +18,6 @@
   flex-direction: column;
   align-items: center;
   padding: 6rem;
-  width: 430px;
   background-color: var(--background-black);
 }
 
@@ -40,8 +39,6 @@
   font-family: 'Lexend Bold' , Arial, Helvetica, sans-serif;
   color: var(--background-black);
   text-decoration: none;
-
-
   background-color: #1ed760;
   cursor: pointer;
   width: 243px;

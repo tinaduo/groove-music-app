@@ -134,7 +134,7 @@ export default function StatsPage() {
                         <p className={styles.paragraph}>This chart is a colourful and intuitive visual breakdown of your top genres, offering a pieced-together snapshot of your musical inclinations. Each section corresponds to a genre that resonates with your listening habits, highlighting the rich variety in your playlist. <br></br><br></br> It's an at-a-glance revelation of where your audio adventures have taken you, a reflection of your eclectic taste. To explore these sounds that strike a chord with you, step into 'Tunebox' and let your personal soundtrack unfold.</p>
                         <Link
                             href="/Quiz"
-                            className={styles.buttonContainer}>Go to Tunebox</Link>
+                            className={styles.buttonContainer}>Go to Tunebox!</Link>
                     </div>
                 )}
             </main>

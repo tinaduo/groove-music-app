@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import styles from "./PostForm.module.css";
 import ReactStars from 'react-stars'
 
+
 export function PostForm() {
     const [title, setTitle] = useState('');
     const [review, setReview] = useState('');
@@ -17,6 +18,10 @@ export function PostForm() {
 
     const handleDateChange = (event) => {
         setDate(event.target.value);
+    };
+
+    const goToExplorePage = () => {
+    window.location.href = '/explore';
     };
 
     const handleSubmit = (event) => {
@@ -111,8 +116,8 @@ export function PostForm() {
             </div>
             <button
                 className={styles.submitButton}
-                type="submit">
-                Submit Review
+                onclick="goToExplorePage()">
+                Post Review
             </button>
         </form>
     );

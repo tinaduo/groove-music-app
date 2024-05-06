@@ -39,7 +39,7 @@ export default function NavBar() {
           </Link>
         </li>
         <li>
-          <Link href="/stats" className={styles.text}>
+          <Link href="/profile" className={styles.text}>
             <div className={styles.link}>
               <Image src="/images/profile.svg" alt="Profile" width={30} height={30} />
               <span>Profile</span>

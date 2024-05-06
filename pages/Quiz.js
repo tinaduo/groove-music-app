@@ -3,6 +3,7 @@ import dynamic from 'next/dynamic';
 import styles from '/styles/Quiz.module.css';
 import { useRouter } from 'next/router';
 import NavBar from '@/components/NavigationBar';
+import Head from 'next/head';
 
 const Lottie = dynamic(() => import('react-lottie'), { ssr: false });
 
@@ -11,7 +12,6 @@ const defaultOptions = {
   autoplay: true,
   animationData: require('/public/animations/rotating_logo.json'),
 };
-
 
 
 export default function Quiz() {
@@ -23,6 +23,12 @@ export default function Quiz() {
 
   return (
     <>
+    <Head>
+                <title>GROOVE - TUNEBOX</title>
+                <meta name="description" content="See your Top Spotify Genres!" />
+                <meta name="viewport" content="width=device-width, initial-scale=1" />
+                <link rel="icon" href="/favicon.ico" />
+            </Head>
     <main className={styles.mainContainer}>
       <div  className={styles.parentContainer}>
       <div className={styles.groove}><h1>GROOVE</h1></div>

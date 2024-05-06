@@ -1,5 +1,6 @@
 import styles from "@/styles/Settings.module.css"
 import Link from "next/link";
+import Head from "next/head";
 
 export default function Settings() {
 
@@ -19,6 +20,12 @@ export default function Settings() {
 
   return (
     <>
+    <Head>
+                <title>GROOVE - SETTINGS</title>
+                <meta name="description" content="See your Top Spotify Genres!" />
+                <meta name="viewport" content="width=device-width, initial-scale=1" />
+                <link rel="icon" href="/favicon.ico" />
+            </Head>
       <main className={styles.main}>
         <div className={styles.parentContainer}>
           <Link
