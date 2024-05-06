@@ -17,8 +17,15 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.parentContainer {
+    height: 100vh;
+    width: 430px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background-color: var(--background-black);
-    height: 932px;
 }
 
 .grooveLogo {
@@ -90,6 +97,7 @@
     width: 118.86px;
     height: 114.34px;
 }
+
 
 .systemHeader {
     font-family: 'Lexend';
