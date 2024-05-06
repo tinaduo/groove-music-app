@@ -109,11 +109,12 @@ export function PostForm() {
                     </div>
                 </div>
             </div>
+            <a href="/explore">
             <button
-                className={styles.submitButton}
-                href="/Explore">
+                className={styles.submitButton}>
                 Post Review
             </button>
+            </a>
         </form>
     );
 }
