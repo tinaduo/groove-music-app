@@ -6,9 +6,9 @@ import Link from "next/link";
 const Lottie = dynamic(() => import('react-lottie'), { ssr: false });
 
 const defaultOptions = {
-  loop: true,
-  autoplay: true,
-  animationData: require('/public/characters/happy.json'),
+    loop: true,
+    autoplay: true,
+    animationData: require('/public/characters/happy.json'),
 };
 
 export default function Onboarding() {
@@ -17,58 +17,58 @@ export default function Onboarding() {
 
     return (
         <main className={styles.container}>
-        <div className={styles.secondContainer}>
-            <div className={styles.logo}>
-                <img src="/images/onboardingLogo.png"/>
-            </div>
-            <div className={styles.logo2}>
-                <img src="/images/onboardingLogo.png"/>
-            </div>
-            <div className={styles.screenshot1}>
-                <img src="/images/onboarding3a.png"/>
-            </div>
-            <div className={styles.screenshot2}>
-                <img src="/images/onboarding3b.png"/>
-            </div>
-            <div className={styles.character}>
-                <Lottie options={defaultOptions} height={280} width={280}/>
-            </div>
-            <div className={styles.blackBG}>
-                <h2>Find Your Community!</h2>
-                <p className={styles.text}>
-                Join the Groove community! Rate music and write reviews, share your opinions with our community. Show off your favourite songs and albums!
-                </p>
-                <div className={styles.circle}>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
+            <div className={styles.secondContainer}>
+                <div className={styles.logo}>
+                    <img src="/images/onboardingLogo.png" />
                 </div>
-                <div className={styles.navigation}>
-                    <Link href="/onboarding4" className={styles.link}>
-                        <div className={styles.next}>
-                            <span>next</span>
-                            <div 
-                            onMouseEnter={() => setIsHovered(true)}
-                            onMouseLeave={() => setIsHovered(false)}>
-                                <img src= {isHovered ? '/images/nextArrowHover.svg' : '/images/nextArrow.svg'}/>
+                <div className={styles.logo2}>
+                    <img src="/images/onboardingLogo.png" />
+                </div>
+                <div className={styles.screenshot1}>
+                    <img src="/images/onboarding3a.png" />
+                </div>
+                <div className={styles.screenshot2}>
+                    <img src="/images/onboarding3b.png" />
+                </div>
+                <div className={styles.character}>
+                    <Lottie options={defaultOptions} height={280} width={280} />
+                </div>
+                <div className={styles.blackBG}>
+                    <h2>Find Your Community!</h2>
+                    <p className={styles.text}>
+                        Join the Groove community! Rate music and write reviews, share your opinions with our community. Show off your favourite songs and albums!
+                    </p>
+                    <div className={styles.circle}>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div className={styles.navigation}>
+                        <Link href="/onboarding4" className={styles.link}>
+                            <div className={styles.next}>
+                                <span>next</span>
+                                <div
+                                    onMouseEnter={() => setIsHovered(true)}
+                                    onMouseLeave={() => setIsHovered(false)}>
+                                    <img src={isHovered ? '/images/nextArrowHover.svg' : '/images/nextArrow.svg'} />
+                                </div>
                             </div>
-                        </div>
-                    </Link>
-                    <Link href="/onboarding2" className={styles.link}>
-                        <div className={styles.back}>
-                            <div
-                            onMouseEnter={() => setIsHovered2(true)}
-                            onMouseLeave={() => setIsHovered2(false)}
-                            >
-                                <img src= {isHovered2 ? '/images/backArrowHover.svg' : '/images/backArrow.svg'}/>
+                        </Link>
+                        <Link href="/onboarding2" className={styles.link}>
+                            <div className={styles.back}>
+                                <div
+                                    onMouseEnter={() => setIsHovered2(true)}
+                                    onMouseLeave={() => setIsHovered2(false)}
+                                >
+                                    <img src={isHovered2 ? '/images/backArrowHover.svg' : '/images/backArrow.svg'} />
+                                </div>
+                                <span>back</span>
                             </div>
-                            <span>back</span>
-                        </div>
-                    </Link>
+                        </Link>
+                    </div>
                 </div>
             </div>
-        </div>
-    </main>
+        </main>
     );
 }

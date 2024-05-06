@@ -109,7 +109,7 @@ export default function Explore() {
                   active={activeFilters.includes(label)}
                   color={color}
                 />
-               ))}
+              ))}
             </div>
           </div>
         <div className={styles.cards}>{postcards}</div>
