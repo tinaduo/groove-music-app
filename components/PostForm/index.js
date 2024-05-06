@@ -109,11 +109,11 @@ export function PostForm() {
                     </div>
                 </div>
             </div>
-            <button
+            <Link
                 className={styles.submitButton}
-                type="submit">
-                Submit Review
-            </button>
+                href="/Explore.js">
+                Post Review
+            </Link>
         </form>
     );
 }
