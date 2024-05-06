@@ -8,7 +8,7 @@
 --groovy-white: rgba(255, 255, 255, 1);
 --unselected-icongrey: rgba(125, 126, 128, 1);
 --background-black: rgba(14, 15, 17, 1);
---unselected-button-lightgrey: rgba(217, 217, 217, 1);
+--unselected-button-lightgrey: rgb(217, 217, 217);
 --dark--grey: rgba(36, 37, 39, 1);
 --button-gray: rgba(54, 55, 57, 1);
 

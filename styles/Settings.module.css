@@ -12,3 +12,221 @@
     font-family: 'Lexend Bold';
     src: url('/fonts/Lexend-SemiBold.ttf');
 }
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--background-black);
+    height: 932px;
+}
+
+.grooveLogo {
+    font-family: 'PP Monument Extended Regular';
+    color: var(--groovy-white);
+    font-size: 40px;
+    margin-top: 25px;
+    width: 405px;
+}
+
+.backbuttonLink {
+    width: 405px;
+    margin-top: 67px;
+}
+
+.settingsHeader {
+    font-family: 'Lexend';
+    font-size: var(--lexend-header);
+    color: var(--groovy-white);
+    width: 405px;
+}
+
+.appearanceContainer {
+    width: 405px;
+    margin-top: 25px;
+}
+
+.appearanceHeader, .textsizeHeader, .languageHeader, .otherHeader {
+    font-family: 'Lexend';
+    font-size: var(--lexend-body);
+    color: var(--groovy-white);
+    margin-bottom: 6px;
+}
+
+.appearanceselectionContainer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: var(--dark--grey);
+    width: 406px;
+    height: 132px;
+    border-radius: 10px;
+}
+
+.darkHeader {
+    font-family: 'Lexend';
+    font-size: var(--lexend-body);
+    color: var(--groovy-white);
+}
+
+.darkselectionContainer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 118.86px;
+    height: 114.34px;
+}
+
+.lightHeader {
+    font-family: 'Lexend';
+    font-size: var(--lexend-body);
+    color: var(--groovy-white);
+}
+
+.lightselectionContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 118.86px;
+    height: 114.34px;
+}
+
+.systemHeader {
+    font-family: 'Lexend';
+    font-size: var(--lexend-body);
+    color: var(--groovy-white);
+}
+
+.systemselectionContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 118.86px;
+    height: 114.34px;
+}
+
+.textsizeContainer {
+    margin-top: 22px;
+    width: 405px;
+}
+
+.textsizeselectionContainer {
+    display: flex;
+    width: 406px;
+    height: 46px;
+    border-radius: 10px;
+    background-color: var(--dark--grey);
+    align-items: center;
+    padding-left: 5px;
+    padding-right: 5px;
+    justify-content: space-between;
+    margin-bottom: 22px;
+}
+
+.smalltextContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 128.38px;
+    height: 32.15px;
+    border-radius: 5px;
+    border: 1px solid var(--unselected-icongrey);
+}
+
+.smalltextHeader {
+    font-family: 'Lexend';
+    font-size: var(--lexend-subtitle-light);
+    color: var(--unselected-icongrey);
+    text-align: center;
+}
+
+.mediumtextContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 128.38px;
+    height: 32.15px;
+    border-radius: 5px;
+    border: 1px solid var(--unselected-icongrey);
+}
+
+.mediumtextHeader {
+    font-family: 'Lexend';
+    font-size: var(--lexend-body);
+    color: var(--unselected-icongrey);
+    text-align: center;
+}
+
+.largetextContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 128.38px;
+    height: 32.15px;
+    border-radius: 5px;
+    border: 1px solid var(--unselected-icongrey);
+}
+
+.largetextHeader {
+    font-family: 'Lexend';
+    font-size: var(--lexend-subheader);
+    color: var(--unselected-icongrey);
+    text-align: center;
+}
+
+.languageContainer {
+    width: 406px;
+    height: 70px;
+}
+
+.otherContainer {
+    width: 406px;
+}
+
+.teamButton {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--dark--grey);
+    text-decoration: none;
+    flex-direction: row;
+    width: 406px;
+    height: 51px;
+    border-radius: 10px 10px 0px 0px;
+    border-bottom: 0.15px solid var(--unselected-icongrey);
+}
+
+.teamText, .statsText {
+    display: flex;
+    font-family: 'Lexend';
+    font-size: var(--lexend-body);
+    color: var(--unselected-icongrey);
+    text-decoration: none;
+}
+
+.icon {
+    margin-left: 9px;
+    margin-right: 8px;
+}
+
+.icontextContainer {
+    display: flex;
+    align-items: center;
+}
+
+.arrow {
+    margin-right: 13.76px;
+}
+
+.statsButton {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--dark--grey);
+    text-decoration: none;
+    flex-direction: row;
+    width: 406px;
+    height: 51px;
+    border-radius: 0px 0px 10px 10px;
+    border-top: 0.15px solid var(--unselected-icongrey);
+}
