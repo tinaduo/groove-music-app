@@ -1,0 +1,70 @@
+@font-face {
+    font-family: 'Lexend';
+    src: url('/fonts/Lexend-Light.ttf');
+}
+
+@font-face {
+    font-family: 'PP Monument Extended Regular';
+    src: url('/fonts/PPMonumentExtended-Regular.otf');
+}
+
+@font-face {
+    font-family: 'Lexend Bold';
+    src: url('/fonts/Lexend-SemiBold.ttf');
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--background-black);
+    height: 932px;
+}
+
+.grooveLogo {
+    font-family: 'PP Monument Extended Regular';
+    color: var(--groovy-white);
+    font-size: 40px;
+    margin-top: 54px;
+}
+
+.profileHeader {
+    font-family: 'Lexend';
+    font-size: var(--lexend-header);
+    color: var(--groovy-white);
+}
+
+.profileImage {
+    width: 163px;
+    height: 163px;
+    border-radius: 150px;
+    object-fit: cover;
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+.usernameHeader {
+    margin-top: 5px;
+    text-align: center;
+    color: var(--groovy-white);
+    font-family: 'Lexend';
+    font-size: var(--lexend-subheader);
+}
+
+.reviewHeader {
+    margin-top: 38px;
+    text-align: center;
+    color: var(--groovy-white);
+    font-family: 'Lexend';
+    font-size: var(--lexend-subheader);
+}
+
+.headerContainer {
+    display: flex;
+    width: 408px;
+    align-items: flex-end;
+    justify-content: space-between;
+}
