@@ -1,5 +1,6 @@
 import styles from "@/styles/Settings.module.css"
 import Link from "next/link";
+import Head from "next/head";
 
 export default function Settings() {
 
