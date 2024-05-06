@@ -110,7 +110,7 @@ export function PostForm() {
                     </div>
                 </div>
             </div>
-            <Link className={styles.submitButton}>
+            <Link className={styles.submitButton} href="/Explore">
                 Post Review
             </Link>
         </form>
