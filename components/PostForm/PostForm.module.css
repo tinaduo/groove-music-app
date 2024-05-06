@@ -67,6 +67,7 @@
     width: 406px;
     height: 62px;
     padding: 5px;
+    text-decoration: none;
     font-family: 'Lexend', sans-serif;
     font-size: var(--lexend-subheader);
     background-color: var(--dark--grey);
