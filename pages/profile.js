@@ -40,13 +40,6 @@ export default function StatsPage() {
                     <div className={styles.cards}>{postcards}</div>
                     <div className={styles.nav}><NavBar/></div>
                 </div>
-                <div className={styles.profileimagePlaceholder}>
-                    <img className={styles.profileImage} src="/images/profilepicture.jpg"/>
-                    <h3 className={styles.usernameHeader}>@rockpaper.sza</h3>
-                    <h3 className={styles.reviewHeader}>Your Review</h3>
-                </div>
-                <div className={styles.cards}>{postcards}</div>
-                <div className={styles.navBar}><NavBar/></div>
             </main>
         </>
     );
