@@ -27,7 +27,7 @@
 
 .secondContainer {
     width: 430px;
-    height: 932px;
+    height: 100vh;
     background: #8F3832;
     display: flex;
     flex-direction: column;

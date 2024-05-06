@@ -27,13 +27,12 @@
 
 .secondContainer {
     width: 430px;
-    height: 932px;
+    height: 100vh;
     background: #4D4072;
     display: flex;
     flex-direction: column;
     align-items: center;
     position: relative;
-
 }
 
 .screenshot {

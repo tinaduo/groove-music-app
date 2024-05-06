@@ -24,8 +24,8 @@ export default function Quiz() {
   return (
     <>
     <main className={styles.mainContainer}>
-      <div className={styles.groove}><h1>GROOVE</h1></div>
       <div  className={styles.parentContainer}>
+      <div className={styles.groove}><h1>GROOVE</h1></div>
         <header className={styles.header}>
           <div className={styles.logo}>
             <Lottie options={defaultOptions} height={313} width={313}/>
@@ -36,9 +36,9 @@ export default function Quiz() {
           <p className={styles.text}>Tunebox is your musical compass, guiding you to the perfect playlist that resonates with your current mood. Personalized playlists that hit all the right notes.</p>
           <button className={styles.start} onClick={navigateToQuizOne}>Get Started</button>
         </div>
+        <div className={styles.navBar}><NavBar/></div>
       </div>
     </main>
-    <div className={styles.navBar}><NavBar/></div>
     </>
   );
 }

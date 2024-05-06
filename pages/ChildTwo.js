@@ -2,6 +2,7 @@ import React from 'react';
 import LottiePlayer from '@/components/LottiePlayer';
 import styles from '@/styles/ChildTwo.module.css';
 import dynamic from 'next/dynamic';
+import NavBar from '@/components/NavigationBar';
 
 
 const Lottie = dynamic(() => import('react-lottie'), { ssr: false });
@@ -37,6 +38,7 @@ export default function ChildTwo({ result, lottiePath, buttonLink, chip}) {
           <button type="button" className={styles.spotify}>Listen on Spotify</button>
         </a>
       )}
+      <div className={styles.nav}><NavBar/></div>
     </div>
   );
 }
