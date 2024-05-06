@@ -1,28 +1,26 @@
-import { useState, useEffect } from "react";
 import styles from "@/styles/Home.module.css";
 import Head from "next/head";
+import { useState, useEffect } from "react";
 
 export default function Home() {
-  const CLIENT_ID = "22ed42382ae44ed69f8d3a6da1c6e077";
-  const REDIRECT_URI = "https://groove-music-app.vercel.app/onboarding xddd   h6";
-  const AUTH_ENDPOINT = "https://accounts.spotify.com/authorize";
-  const RESPONSE_TYPE = "token";
-  
-  const getTokenFromHashParams = () => {
-    const hashParams = window.location.hash.substr(1).split("&").reduce(function (result, item) {
-      const parts = item.split("=");
-      result[parts[0]] = parts[1];
-      return result;
-    }, {});
+  const CLIENT_ID = "22ed42382ae44ed69f8d3a6da1c6e077"
+    const REDIRECT_URI = "https://groove-music-app.vercel.app/onboarding"
+    const AUTH_ENDPOINT = "https://accounts.spotify.com/authorize"
+    const RESPONSE_TYPE = "token"
 
-    return hashParams.access_token || "";
-  };
+    const [token, setToken] = useState("")
 
-  const [token, setToken] = useState(getTokenFromHashParams());
+    useEffect(() => {
+        const hashParams = window.location.hash.substr(1).split("&").reduce(function (result, item) {
+            const parts = item.split("=");
+            result[parts[0]] = parts[1];
+            return result;
+        }, {});
 
-  useEffect(() => {
-    localStorage.setItem("spotifyToken", token);
-  }, [token]);
+        if (hashParams.access_token) {
+            setToken(hashParams.access_token);
+        }
+    }, []);
 
   return (
     <>
@@ -34,18 +32,15 @@ export default function Home() {
       </Head>
       <main className={`${styles.main}`}>
         <div className={`${styles.headerContainer}`}>
-          <h1 className={`${styles.grooveHeader}`}>GROOVE</h1>
+        <h1 className={`${styles.grooveHeader}`}>GROOVE</h1>
         </div>
-        {!token ? (
-          <a
-            className={`${styles.spotifyButton}`}
-            href={`${AUTH_ENDPOINT}?client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URI}&response_type=${RESPONSE_TYPE}`}
-          >
-            Login to Spotify
-          </a>
-        ) : (
-          <p>User is logged in</p>
-        )}
+                {!token ?
+                    <a 
+                    className={`${styles.spotifyButton}`}
+                    href={`${AUTH_ENDPOINT}?client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URI}&response_type=${RESPONSE_TYPE}`}>
+                      Login to Spotify
+                      </a>
+                    : <button onClick={() => setToken("")}>Logout</button>}
       </main>
     </>
   );
