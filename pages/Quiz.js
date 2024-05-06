@@ -14,7 +14,6 @@ const defaultOptions = {
 };
 
 
-
 export default function Quiz() {
     const router = useRouter();
 

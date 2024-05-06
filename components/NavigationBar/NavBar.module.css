@@ -1,17 +1,17 @@
 @font-face {
     font-family: 'Lexend';
     src: url('/fonts/Lexend-Light.ttf');
-  }
+    }
   
-  @font-face {
+    @font-face {
     font-family: 'PP Monument Extended Light';
     src: url('/fonts/PPMonumentExtended-Light.otf');
-  }
+    }
   
-  @font-face {
+    @font-face {
     font-family: 'Lexend Semibold';
     src: url('/fonts/Lexend-SemiBold.ttf');
-  }
+    }
 
 .header {
     display: flex;
@@ -24,6 +24,7 @@
     font-family: 'Lexend';     
     margin: 0;
     background: var(--background-black);
+    border-top: 0.5px solid var(--unselected-icongrey);
 }
 
 .list { 
