@@ -13,7 +13,7 @@
     src: url('/fonts/Lexend-SemiBold.ttf');
 }
 
-  .mainContainer {
+.mainContainer {
     background: var(--background-black);
     width: 430px;
     margin: 0 auto;
