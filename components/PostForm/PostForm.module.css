@@ -63,6 +63,10 @@
 }
 
 .submitButton {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin-top: 42px;
     width: 406px;
     height: 62px;
