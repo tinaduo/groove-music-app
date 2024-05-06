@@ -21,11 +21,22 @@
     height: 932px;
 }
 
+.parentContainer {
+    height: 100vh;
+    width: 430px;
+}
+
 .grooveLogo {
     font-family: 'PP Monument Extended Regular';
     color: var(--groovy-white);
     font-size: 40px;
     margin-top: 54px;
+}
+
+.profileimagePlaceholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .profileHeader {
@@ -44,6 +55,7 @@
     -moz-user-select: none;
     -webkit-user-select: none;
     -ms-user-select: none;
+    
 }
 
 .usernameHeader {
@@ -69,7 +81,11 @@
     justify-content: space-between;
 }
 
-.navBar {
+.cards {
+    margin-top: 20px;
+}
+
+.nav {
     position: fixed;
     bottom: 0;
 }
