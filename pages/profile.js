@@ -30,7 +30,7 @@ export default function StatsPage() {
                     <h3 className={styles.usernameHeader}>@rockpaper.sza</h3>
                     <h3 className={styles.reviewHeader}>Your Review</h3>
                 </div>
-                <NavBar />
+        <div className={styles.navBar}><NavBar/></div>
             </main>
         </>
     );

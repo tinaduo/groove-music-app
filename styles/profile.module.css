@@ -68,3 +68,8 @@
     align-items: flex-end;
     justify-content: space-between;
 }
+
+.navBar {
+    position: fixed;
+    bottom: 0;
+}
