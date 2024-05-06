@@ -1,11 +1,17 @@
 import styles from "@/styles/team.module.css"
 import Link from "next/link";
-import Image from "next/image";
+import Head from "next/head";
 
-export default function Settings() {
+export default function Team() {
 
     return (
         <>
+        <Head>
+                <title>GROOVE - MEET THE TEAM</title>
+                <meta name="description" content="Meet the Team of Groove" />
+                <meta name="viewport" content="width=device-width, initial-scale=1" />
+                <link rel="icon" href="/favicon.ico" />
+        </Head>
             <main className={styles.main}>
                 <Link
                     className={styles.backbuttonLink}

@@ -3,7 +3,7 @@ import Head from "next/head";
 import { useState, useEffect } from "react";
 
 export default function Home() {
-  const CLIENT_ID = "22ed42382ae44ed69f8d3a6da1c6e077"
+    const CLIENT_ID = "22ed42382ae44ed69f8d3a6da1c6e077"
     const REDIRECT_URI = "https://groove-music-app.vercel.app/onboarding"
     const AUTH_ENDPOINT = "https://accounts.spotify.com/authorize"
     const RESPONSE_TYPE = "token"

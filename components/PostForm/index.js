@@ -116,7 +116,7 @@ export function PostForm() {
             </div>
             <button
                 className={styles.submitButton}
-                onclick="goToExplorePage">
+                onclick="goToExplorePage()">
                 Post Review
             </button>
         </form>
