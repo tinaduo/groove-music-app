@@ -3,7 +3,6 @@ import styles from "./PostForm.module.css";
 import ReactStars from 'react-stars'
 
 export function PostForm() {
-    export function PostForm() {
         const [title, setTitle] = useState('');
         const [review, setReview] = useState('');
         const [date, setDate] = useState('');
@@ -24,6 +23,7 @@ export function PostForm() {
         const handleRatingChange = (newRating) => {
             setRating(newRating);
         };
+}
 
         const handleSubmit = (event) => {
             event.preventDefault();
