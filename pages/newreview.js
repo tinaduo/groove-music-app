@@ -3,7 +3,7 @@ import styles from "@/styles/NewReview.module.css";
 
 export default function NewReview() {
     const CLIENT_ID = "22ed42382ae44ed69f8d3a6da1c6e077";
-    const REDIRECT_URI = "https://groove-music-app.vercel.app/home";
+    const REDIRECT_URI = "https://groove-music-app.vercel.app/newreview";
     const AUTH_ENDPOINT = "https://accounts.spotify.com/authorize";
     const RESPONSE_TYPE = "token";
 
