@@ -17,10 +17,14 @@
 .title {
     background: var(--background-black);
     border: solid var(--background-black) 2px;
+    width: 430px;
+    padding-left: 30px;
 }
 
 .bar {
-    background: var(--groovy-black);
+    background: var(--background-black);
+    padding-left: 30px;
+    padding-right: 30px;
 }
 
 .container {
@@ -28,4 +32,5 @@
     width: 430px;
     margin: 0 auto;
     background-size: cover;
+    height: 20vh;
 }

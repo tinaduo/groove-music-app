@@ -19,6 +19,7 @@
     align-items: center;
     font-family: 'Lexend';
     color: white;
+    height: 80vh;
 }
 
 .result h3 {
@@ -80,8 +81,13 @@
 .groove {
     margin-top: 30px;
     font-family: 'PP Monument Extended Light';
-    font-size: 20px;
+    font-size: 17px;
     text-align: center;
+}
+
+.nav {
+    position: fixed;
+    bottom: 0;
 }
 
 /*CHIPS STYLING*/

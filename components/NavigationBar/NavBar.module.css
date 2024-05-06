@@ -17,12 +17,13 @@
     display: flex;
     justify-content: center;
     height: 80px;
-    width: 100%;
+    width: 430px;
     margin-top: 44%;
     position: relative;
     z-index: 3;
     font-family: 'Lexend';     
     margin: 0;
+    background: var(--background-black);
 }
 
 .list { 

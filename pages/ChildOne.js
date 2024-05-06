@@ -25,15 +25,17 @@ export default function ChildOne({ decisionData, onDecision, onPrevious }) {
             {option.charAt(0).toUpperCase() + option.slice(1)}
           </button>
         ))}
-      </div>
-      <div className={styles.navContainer}>
-        {onPrevious && <button onClick={onPrevious} className={styles.submitButton}>Previous</button>}
-        <button onClick={handleNext} className={styles.submitButton}>
-          Next
+        <div className={styles.navContainer}>
+          {onPrevious && <button onClick={onPrevious} className={styles.submitButton}>
+            Previous
+          </button>}
+          <button onClick={handleNext} className={styles.submitButton}>
+            Next
         </button>
+        </div>
+      <div className={styles.navBar}><NavBar/></div>
       </div>
     </main>
-    <div className={styles.navBar}><NavBar/></div>
     </>
   );
 }
