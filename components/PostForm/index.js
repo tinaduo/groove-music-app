@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import styles from "./PostForm.module.css";
 import ReactStars from 'react-stars'
+import Link from 'next/link';
 
 export function PostForm() {
     const [title, setTitle] = useState('');
