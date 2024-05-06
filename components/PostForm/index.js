@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import styles from "./PostForm.module.css";
 import ReactStars from 'react-stars'
+import Link from 'next/link';
 
 export function PostForm() {
     const [title, setTitle] = useState('');
@@ -109,12 +110,9 @@ export function PostForm() {
                     </div>
                 </div>
             </div>
-            <a href="/explore">
-            <button
-                className={styles.submitButton}>
+            <Link className={styles.submitButton}>
                 Post Review
-            </button>
-            </a>
+            </Link>
         </form>
     );
 }
