@@ -88,11 +88,11 @@
 }
 
 .character {
-    position: absolute;
-    top: 340px;
-    right: -10px;
-    z-index: 4;
-}
+    width: 280px;
+    height: 280px;
+    z-index: 3;
+    margin-bottom: -40px;
+} 
 
 .blackBG h2 {
     font-family: 'Lexend';
@@ -153,4 +153,13 @@
     height: 11px;
     border-radius: 10px;
     background: #D9D9D9;
+}
+
+.borderTest {
+    position: fixed;
+    z-index: 3;
+    bottom: 0;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: end;
 }
