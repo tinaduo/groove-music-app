@@ -34,15 +34,17 @@ const activityData = {
 
 export default function Activity() {
   return (
-    <main className={styles.main}>
-      <div className={styles.container}>
-        <div className={styles.title}>
-          <h1>Groove</h1>
-          <h2>Activity</h2>
+    <>
+      <main className={styles.main}>
+        <div className={styles.container}>
+          <div className={styles.title}>
+            <h1>GROOVE</h1>
+            <h2>Activity</h2>
+          </div>
+          <NotificationsList activity={activityData} />
+          <div className={styles.nav}><NavBar/></div>
         </div>
-        <NotificationsList activity={activityData} />
-        <div className={styles.nav}><NavBar/></div>
-      </div>
     </main>
+    </>
   );
 }

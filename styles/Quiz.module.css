@@ -13,7 +13,12 @@
     src: url('/fonts/Lexend-SemiBold.ttf');
 }
 
-  .mainContainer {
+@font-face {
+    font-family: 'PP Monument Extended Regular';
+    src: url('/fonts/PPMonumentExtended-Regular.otf');
+}
+
+.mainContainer {
     background: var(--background-black);
     width: 430px;
     margin: 0 auto;
@@ -34,7 +39,7 @@
 .groove h1 {
     font-size: 40px;
     color: var(--groovy-white);
-    font-family: 'PP Monument Extended Light';
+    font-family: 'PP Monument Extended Regular';
     padding-top: 30px;
 }
 
@@ -42,9 +47,10 @@
     background: var(--background-black);
     border: solid var(--background-black) 2px;
     width: 430px;
-    padding-left: 30px;
+    padding-left: 28px;
     position: fixed;
     top: 0;
+    font-family: 'PP Monument Extended Regular';
 }
 
 .header {
@@ -58,7 +64,7 @@
 
 
 .welcome {
-    font-family: 'PP Monument Extended Light', 'PP Monument Extended Light';
+    font-family: 'PP Monument Extended Light';
     width: 300px;
     margin-bottom: 20px;
     margin-top: 30px;

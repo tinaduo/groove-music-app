@@ -9,6 +9,11 @@
 }
 
 @font-face {
+  font-family: 'PP Monument Extended Regular';
+  src: url('/fonts/PPMonumentExtended-Regular.otf');
+}
+
+@font-face {
   font-family: 'Lexend Semibold';
   src: url('/fonts/Lexend-SemiBold.ttf');
 }
@@ -57,7 +62,7 @@
 .groove h1 {
   font-size: 40px;
   color: var(--groovy-white);
-  font-family: 'PP Monument Extended Light';
+  font-family: 'PP Monument Extended Regular';
   padding-top: 30px;
 }
 

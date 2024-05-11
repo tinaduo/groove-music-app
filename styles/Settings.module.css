@@ -238,3 +238,30 @@
     border-radius: 0px 0px 10px 10px;
     border-top: 0.15px solid var(--unselected-icongrey);
 }
+
+.lightBox {
+    width: 123px;
+    height: 96px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} 
+
+.darkBox {
+    width: 123px;
+    height: 96px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+}
+
+.systemBox {
+    width: 123px;
+    height: 96px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+}
