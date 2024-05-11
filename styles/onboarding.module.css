@@ -19,10 +19,13 @@
 }
 
 .container {
-    width: 100%;
+    height: 100vh;
+    width: 430px;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
+    background-color: var(--background-black);
+    top: 0;
 }
 
 .secondContainer {
