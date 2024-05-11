@@ -30,7 +30,7 @@
     font-family: 'PP Monument Extended Regular';
     color: var(--groovy-white);
     font-size: 40px;
-    margin-top: 54px;
+    padding-top: 30px;
 }
 
 .profileimagePlaceholder {
@@ -76,9 +76,11 @@
 
 .headerContainer {
     display: flex;
-    width: 408px;
+    width: 430px;
+    padding-left: 28px;
     align-items: flex-end;
     justify-content: space-between;
+    border: solid var(--background-black) 2px;  
 }
 
 .cards {

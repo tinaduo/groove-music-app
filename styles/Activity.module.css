@@ -18,6 +18,11 @@
     src: url('/fonts/Lexend-Thin.ttf');
 }
 
+@font-face {
+    font-family: 'PP Monument Extended Regular';
+    src: url('/fonts/PPMonumentExtended-Regular.otf');
+}
+
 .main {
     background: var(--background-black);
     color: #fff;
@@ -34,17 +39,20 @@
 
 
 .title {
-    color: white;
-    font-family: 'Lexend';
+    background: var(--background-black);
+    border: solid var(--background-black) 2px;
+    width: 430px;
+    padding-left: 28px;
 }
 
 .title h1 {
-    font-family: 'PP Monument Extended Light';
+    font-family: 'PP Monument Extended Regular';
     font-size: 40px;
-    
+    padding-top: 30px;
 }
 
 .title h2 {
+    font-family: 'Lexend';
     font-size: 33.18px;
     
 }

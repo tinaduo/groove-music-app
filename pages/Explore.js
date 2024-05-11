@@ -96,7 +96,7 @@ export default function Explore() {
     </Head>
     <main className={styles.container}>
       <div  className={styles.scroll}>
-      <div className={styles.groove}><h1>GROOVE</h1></div>
+        <div className={styles.groove}><h1>GROOVE</h1></div>
         <CarouselComponent images={images} />
           <div className={styles.feed}>
             <h3>Your Feed</h3>
