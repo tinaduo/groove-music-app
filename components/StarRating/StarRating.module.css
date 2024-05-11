@@ -1,0 +1,15 @@
+.StarRating {
+  font-size: 24px;
+}
+
+.star {
+  font-size: 24px;
+  border-radius: 20px;
+  cursor: pointer;
+  color: #ccc;
+}
+
+.selected {
+  font-size: 24px;
+  color: #f1c40f;
+}
