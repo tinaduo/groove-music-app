@@ -9,6 +9,11 @@
 }
 
 @font-face {
+    font-family: 'PP Monument Extended Regular';
+    src: url('/fonts/PPMonumentExtended-Regular.otf');
+}
+
+@font-face {
     font-family: 'Lexend Semibold';
     src: url('/fonts/Lexend-SemiBold.ttf');
 }

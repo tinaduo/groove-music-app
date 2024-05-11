@@ -1,18 +1,3 @@
-@font-face {
-    font-family: 'Lexend';
-    src: url('/fonts/Lexend-Light.ttf');
-}
-
-@font-face {
-    font-family: 'PP Monument Extended Light';
-    src: url('/fonts/PPMonumentExtended-Light.otf');
-}
-
-@font-face {
-    font-family: 'Lexend Semibold';
-    src: url('/fonts/Lexend-SemiBold.ttf');
-}
-
 .parentContainer {
     background: var(--background-black);
     color: var(--groovy-white);
