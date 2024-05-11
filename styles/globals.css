@@ -1,3 +1,23 @@
+@font-face {
+    font-family: 'Lexend';
+    src: url('/fonts/Lexend-Light.ttf');
+}
+
+@font-face {
+    font-family: 'PP Monument Extended Light';
+    src: url('/fonts/PPMonumentExtended-Light.otf');
+}
+
+@font-face {
+    font-family: 'Lexend Semibold';
+    src: url('/fonts/Lexend-SemiBold.ttf');
+}
+
+@font-face {
+    font-family: 'Lexend Thin';
+    src: url('/fonts/Lexend-Thin.ttf');
+}
+
 :root {
 /* COLOR STYLES */
 --groovy-purple: rgba(158, 128, 241, 1);
