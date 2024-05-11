@@ -1,18 +1,3 @@
-@font-face {
-    font-family: 'Lexend';
-    src: url('/fonts/Lexend-Light.ttf');
-}
-
-@font-face {
-    font-family: 'PP Monument Extended Regular';
-    src: url('/fonts/PPMonumentExtended-Regular.otf');
-}
-
-@font-face {
-    font-family: 'Lexend Bold';
-    src: url('/fonts/Lexend-SemiBold.ttf');
-}
-
 .main {
     display: flex;
     flex-direction: column;
