@@ -1,21 +1,6 @@
-@font-face {
-    font-family: 'Lexend';
-    src: url('/fonts/Lexend-Light.ttf');
-  }
-  
-  @font-face {
-    font-family: 'PP Monument Extended Light';
-    src: url('/fonts/PPMonumentExtended-Light.otf');
-  }
-  
-  @font-face {
-    font-family: 'Lexend Semibold';
-    src: url('/fonts/Lexend-SemiBold.ttf');
-  }
-
 .test h4{
     color: white;
-    margin-bottom: 20px;;
+    margin-bottom: 4px;;
     font-family: 'Lexend';
 }
 

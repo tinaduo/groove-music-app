@@ -15,7 +15,7 @@ const CarouselComponent = ({ images, name }) => {
 
   return (
     <div className={styles.test} style={{ maxWidth: '350px', margin: 'auto', }}>
-        <h4>popular this week</h4>
+        <h4>Popular This Week</h4>
       <Slider {...settings}>
         {images.map((image) => (
           <div className={styles.test2}>

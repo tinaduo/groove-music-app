@@ -70,9 +70,16 @@
 
 .cards {
     margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .nav {
     position: fixed;
     bottom: 0;
+}
+
+.settingsButton {
+    margin-right: 21px;
 }

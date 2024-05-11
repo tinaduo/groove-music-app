@@ -16,7 +16,7 @@
 }
 
 .scroll {
-  height: 100vh;
+  height: 170vh;
   overflow-y: scroll;
   overflow-x: hidden;
 }
@@ -44,6 +44,7 @@
   color: var(--groovy-white);
   font-family: 'PP Monument Extended Regular';
   padding-top: 30px;
+  margin-bottom: 18px;
 }
 
 .groove {

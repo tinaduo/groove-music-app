@@ -1,27 +1,12 @@
-@font-face {
-    font-family: 'Lexend';
-    src: url('/fonts/Lexend-Light.ttf');
-  }
-  
-  @font-face {
-    font-family: 'PP Monument Extended Light';
-    src: url('/fonts/PPMonumentExtended-Light.otf');
-  }
-  
-  @font-face {
-    font-family: 'Lexend Semibold';
-    src: url('/fonts/Lexend-SemiBold.ttf');
-  }
-
 .filter {
     border: none;
     border-radius: 15.872px;
     padding: 6px 14px;
-    color: white;
-    font-family: 'Lexend Semibold';
-    font-size: 14px;
+    color: var(--groovy-white);
+    font-family: 'Lexend';
+    font-size: 13.33px;
     margin: 5px;
-    transition: background-color 0.5s; 
+    transition: background-color 0.8s; 
     display: inline-flex;
     align-items: center;
     column-gap: 5px;
@@ -33,5 +18,5 @@
 }
 
 .active {
-    color: black;
+    color: var(--groovy-black);
 }

@@ -44,7 +44,8 @@
 
 
 .welcome {
-    font-family: 'PP Monument Extended Light';
+    font-family: 'PP Monument Extended Regular';
+    font-size: 30px;
     width: 300px;
     margin-bottom: 20px;
     margin-top: 30px;
@@ -55,6 +56,7 @@
     text-align: left;
     width: 300px;
     color: white;
+    font-size: var(--lexend-body);
 }
 
 .text {
@@ -64,6 +66,7 @@
 
 .start {
     background: var(--background-black);
+    font-size: var(--lexend-subheader);
     color: white;
     border: solid 2px #9e80f1;
     padding: 5px 16px;

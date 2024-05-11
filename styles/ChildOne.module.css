@@ -18,7 +18,7 @@
 
 
 .answerButton {
-    background: var(--background-black);
+    background: var(--dark--grey);
     border: solid 4px white;
     color: white;
     padding: 14px 52px 13px 51px;
@@ -26,6 +26,7 @@
     margin-top: 50px;
     transition: all 0.3s;
     font-family: 'Lexend';
+    font-size: var(--lexend-body);
 }
 
 .answerButton:active {
@@ -42,10 +43,11 @@
     font-family: 'Lexend Semibold';
 }
 
-.submitButton:focus {
+.submitButton:focus{
     background: var(--groovy-purple-light);
     border: solid 4px var(--groovy-purple-light);
     color: var(--groovy-black);
+    fill: var(--groovy-black);
 }
 
 .navContainer {
@@ -56,7 +58,7 @@
     width: 380px;
 }
 
-.submitButton:active {
+.submitButton:active{
     background-color: var(--groovy-purple);
     border: solid 4px var(--groovy-purple);
 }
@@ -65,13 +67,16 @@
     background: #0E0F11;
     color: var(--groovy-white);
     border: solid 4px var(--groovy-purple);
-    padding: 5px 16px;
     border-radius: 12px;
+    height: 39px;
+    width: 125px;
+    font-size: 23.04px;
 }
 
 .question {
     text-align: center;
     font-family: 'Lexend';
+    font-size: var(--lexend-subheader);
     margin-top: 80px;
     padding-left: 30px;
     padding-right: 30px;
@@ -80,4 +85,13 @@
 .navBar {
     position: fixed;
     bottom: 0;
+}
+
+.nextArrow {
+    margin-left: 13px;
+    fill: white;
+}
+
+.backArrow {
+    margin-right: 13px;
 }
