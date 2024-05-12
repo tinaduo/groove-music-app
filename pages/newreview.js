@@ -27,18 +27,6 @@ export default function NewReview() {
     };
 
     useEffect(() => {
-        const hashParams = window.location.hash.substr(1).split("&").reduce(function (result, item) {
-            const parts = item.split("=");
-            result[parts[0]] = parts[1];
-            return result;
-        }, {});
-
-        if (hashParams.access_token) {
-            setToken(hashParams.access_token);
-        }
-    }, []);
-
-    useEffect(() => {
         const searchSongs = async () => {
             if (searchKey.trim() === "") {
                 setSongs([]);
@@ -86,7 +74,6 @@ export default function NewReview() {
 
     return (
         <main className={`${styles.main}`}>
-            {token &&
                 <form>
                     <div className={styles.backbuttonContainer}>
                             <Link
@@ -111,7 +98,6 @@ export default function NewReview() {
                         onChange={e => setSearchKey(e.target.value)}
                     />
                 </form>
-            }
             {songs.length > 0 ? renderSongs() : <h2 className={`${styles.errorMessage}`}>no search results</h2>}
         </main>
     );
