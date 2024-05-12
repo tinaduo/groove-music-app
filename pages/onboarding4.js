@@ -49,7 +49,7 @@ export default function Onboarding() {
                                 </div>
                             </div>
                         </Link>
-                        <Link href="/onboarding2" className={styles.link}>
+                        <Link href="/onboarding3" className={styles.link}>
                             <div className={styles.back}>
                                 <div
                                     onMouseEnter={() => setIsHovered2(true)}
