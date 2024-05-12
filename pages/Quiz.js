@@ -15,7 +15,7 @@ const defaultOptions = {
 
 
 export default function Quiz() {
-    const router = useRouter();
+  const router = useRouter();
 
   const navigateToQuizOne = () => {
     router.push('./ParentOne');
@@ -23,28 +23,27 @@ export default function Quiz() {
 
   return (
     <>
-    <Head>
-                <title>GROOVE - TUNEBOX</title>
-                <meta name="description" content="See your Top Spotify Genres!" />
-                <meta name="viewport" content="width=device-width, initial-scale=1" />
-                <link rel="icon" href="/favicon.ico" />
-            </Head>
-    <main className={styles.mainContainer}>
-      <div  className={styles.parentContainer}>
-      <div className={styles.groove}><h1>GROOVE</h1></div>
-        <header className={styles.header}>
-          <div className={styles.logo}>
-            <Lottie options={defaultOptions} height={313} width={313}/>
+      <Head>
+        <title>GROOVE - TUNEBOX</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      <main className={styles.mainContainer}>
+        <div className={styles.parentContainer}>
+          <div className={styles.groove}><h1>GROOVE</h1></div>
+          <header className={styles.header}>
+            <div className={styles.logo}>
+              <Lottie options={defaultOptions} height={313} width={313} />
+            </div>
+          </header>
+          <div className={styles.test}>
+            <h2 className={styles.welcome}>Welcome to Tunebox!</h2>
+            <p className={styles.text}>Tunebox is your musical compass, guiding you to the perfect playlist that resonates with your current mood. Personalized playlists that hit all the right notes.</p>
+            <button className={styles.start} onClick={navigateToQuizOne}>Get Started</button>
           </div>
-        </header>
-        <div className={styles.test}>
-          <h2 className={styles.welcome}>Welcome to Tunebox!</h2>
-          <p className={styles.text}>Tunebox is your musical compass, guiding you to the perfect playlist that resonates with your current mood. Personalized playlists that hit all the right notes.</p>
-          <button className={styles.start} onClick={navigateToQuizOne}>Get Started</button>
+          <div className={styles.navBar}><NavBar /></div>
         </div>
-        <div className={styles.navBar}><NavBar/></div>
-      </div>
-    </main>
+      </main>
     </>
   );
 }
