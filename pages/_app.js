@@ -16,8 +16,8 @@ function App({ Component, pageProps }) {
             sessionStorage.setItem("spotifyToken", hashParams.access_token);
         } else {
             const storedToken = sessionStorage.getItem("spotifyToken");
-            if (!storedToken && router.pathname !== '/login') {
-                router.push('/login');
+            if (!storedToken && router.pathname !== '/index') {
+                router.push('/index');
             }
         }
     }, []);
