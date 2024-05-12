@@ -2,7 +2,6 @@ import styles from "@/styles/onboarding2.module.css";
 import dynamic from 'next/dynamic';
 import { useState } from "react";
 import Link from "next/link";
-import useToken from "./useToken";
 
 const Lottie = dynamic(() => import('react-lottie'), { ssr: false });
 
