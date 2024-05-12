@@ -37,26 +37,73 @@ export default function ReviewPage() {
             setGradientColor(gradient);
         };
 
-        const fetchGenres = async () => {
-            try {
-                const response = await fetch(`https://api.spotify.com/v1/search?q=${encodeURIComponent(songData.name)}&type=track`, {
-                    headers: {
-                        Authorization: `Bearer ${YOUR_SPOTIFY_ACCESS_TOKEN}`
-                    }
-                });
-
-                if (!response.ok) {
-                    throw new Error('Failed to fetch genres');
-                }
-
-                const data = await response.json();
-                if (data.tracks && data.tracks.items && data.tracks.items.length > 0) {
-                    setGenres(data.tracks.items[0].genres);
-                }
-            } catch (error) {
-                console.error('Error fetching genres:', error);
+ const fetchAlbumDetails = async () => {
+    try {
+        const response = await fetch(`https://api.spotify.com/v1/search?q=${encodeURIComponent(songData.name)}&type=album`, {
+            headers: {
+                Authorization: `Bearer ${YOUR_SPOTIFY_ACCESS_TOKEN}`
             }
-        };
+        });
+
+        if (!response.ok) {
+            throw new Error('Failed to fetch album details');
+        }
+
+        const data = await response.json();
+        if (data.albums && data.albums.items && data.albums.items.length > 0) {
+            const albumId = data.albums.items[0].id;
+            fetchAlbumYear(albumId);
+        }
+    } catch (error) {
+        console.error('Error fetching album details:', error);
+    }
+};
+
+    const fetchAlbumYear = async (albumId) => {
+        try {
+            const response = await fetch(`https://api.spotify.com/v1/albums/${albumId}`, {
+                headers: {
+                    Authorization: `Bearer ${YOUR_SPOTIFY_ACCESS_TOKEN}`
+                }
+            });
+
+            if (!response.ok) {
+                throw new Error('Failed to fetch album year');
+            }
+
+            const data = await response.json();
+            if (data.release_date) {
+                const year = new Date(data.release_date).getFullYear();
+                console.log('Album year:', year);
+            }
+        } catch (error) {
+            console.error('Error fetching album year:', error);
+        }
+    };
+
+    const fetchGenres = async () => {
+        try {
+            const response = await fetch(`https://api.spotify.com/v1/search?q=${encodeURIComponent(songData.name)}&type=track`, {
+                headers: {
+                    Authorization: `Bearer ${YOUR_SPOTIFY_ACCESS_TOKEN}`
+                }
+            });
+
+            if (!response.ok) {
+                throw new Error('Failed to fetch genres');
+            }
+
+            const data = await response.json();
+            if (data.tracks && data.tracks.items && data.tracks.items.length > 0) {
+                setGenres(data.tracks.items[0].genres);
+            }
+
+            fetchAlbumDetails();
+        } catch (error) {
+            console.error('Error fetching genres:', error);
+        }
+    };
+
 
         fetchGenres();
     }, [songData]);
