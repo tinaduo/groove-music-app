@@ -3,7 +3,7 @@ import dynamic from 'next/dynamic';
 import { useState } from "react";
 import Link from "next/link";
 import { useContext } from 'react';
-import TokenContext from '../TokenContext';
+import TokenContext from './TokenContext';
 
 const Lottie = dynamic(() => import('react-lottie'), { ssr: false });
 
