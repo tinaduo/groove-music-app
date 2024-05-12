@@ -2,8 +2,7 @@ import styles from "@/styles/onboarding2.module.css";
 import dynamic from 'next/dynamic';
 import { useState } from "react";
 import Link from "next/link";
-import { useContext } from 'react';
-import TokenContext from './TokenContext';
+import useToken from "./useToken";
 
 const Lottie = dynamic(() => import('react-lottie'), { ssr: false });
 
@@ -14,7 +13,7 @@ const defaultOptions = {
 };
 
 export default function Onboarding() {
-    const { token, setToken, removeToken } = useContext(TokenContext);
+    useToken();
     const [isHovered, setIsHovered] = useState(false);
     const [isHovered2, setIsHovered2] = useState(false);
 
