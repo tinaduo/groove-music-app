@@ -3,13 +3,22 @@
     flex-direction: column;
     align-items: center;
     background-color: var(--background-black);
-    height: 932px;
+    height: 100vh;
 }
 
 .parentContainer {
-    height: 100vh;
     width: 430px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
 }
+
+.parentContainer::-webkit-scrollbar {
+    width: 0px !important; /* Width of the vertical scrollbar */
+    height: 0px !important; /* Height of the horizontal scrollbar */
+    display: none !important;
+  }
 
 .grooveLogo {
     font-family: 'PP Monument Extended Regular';

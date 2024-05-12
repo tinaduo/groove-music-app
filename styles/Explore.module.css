@@ -1,12 +1,12 @@
 .container {
   background: var(--background-black);
-  color: #fff;
+  width: 430px;
+  margin: 0 auto;
+  background-size: cover;
+  background-size: cover;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  position: static;
-  min-height: 766px;
 }
 
 .cards {
@@ -16,28 +16,20 @@
 }
 
 .scroll {
-  height: 170vh;
+  height: 100vh;
   overflow-y: scroll;
   overflow-x: hidden;
-}
+  width: 430px;
+  scrollbar-width: none;
+  -ms-overflow-style: none; 
+} 
 
 .scroll::-webkit-scrollbar {
-  width: 4px !important;
-  height: 20px;
-}
-  
-.scroll::-webkit-scrollbar-track {
-  background: var(--background-black) !important;
-}
-  
-.scroll::-webkit-scrollbar-thumb {
-  background-color: transparent;
+  width: 0px !important; /* Width of the vertical scrollbar */
+  height: 0px !important; /* Height of the horizontal scrollbar */
+  display: none !important;
 }
 
-.scroll:hover::-webkit-scrollbar-thumb {
-  background-color: #888;
-  border-radius: 10px !important;
-}
 
 .groove h1 {
   font-size: 40px;
