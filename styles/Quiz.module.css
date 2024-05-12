@@ -42,7 +42,6 @@
     margin-top: 50px;
 }
 
-
 .welcome {
     font-family: 'PP Monument Extended Regular';
     font-size: 30px;
@@ -54,7 +53,7 @@
 
 .test {
     text-align: left;
-    width: 300px;
+    width: 386px;
     color: white;
     font-size: var(--lexend-body);
 }

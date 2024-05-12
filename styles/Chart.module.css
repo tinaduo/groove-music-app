@@ -10,14 +10,14 @@
     display: flex;
     font-size: var(--lexend-header);
     color: var(--groovy-white);
-    font-family: 'Lexend', Arial, Helvetica, sans-serif;
+    font-family: 'Lexend';
     text-align: center;
     margin-bottom: 35px;
 }
 
 .paragraph {
     font-size: var(--lexend-body);
-    font-family: 'Lexend', Arial, Helvetica, sans-serif;
+    font-family: 'Lexend';
     color: var(--groovy-white) ;
     padding: 10px;
     width: 405px;
@@ -25,11 +25,11 @@
 }
 
 .chartCanvas {
-    font-family: 'Lexend', Arial, Helvetica, sans-serif;
+    font-family: 'Lexend';
 }
 
 .buttonContainer {
-    font-family: 'Lexend Bold' , Arial, Helvetica, sans-serif;
+    font-family: 'Lexend Bold';
     font-size: var(--lexend-body);
     background-color: var(--button-gray);
     color: var(--groovy-white);
