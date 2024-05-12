@@ -113,8 +113,8 @@ export default function Explore() {
             </div>
           </div>
         <div className={styles.cards}>{postcards}</div>
+        <div className={styles.nav}><NavBar/></div>
       </div>
-      <div className={styles.nav}><NavBar/></div>
     </main>
   </>
   );
