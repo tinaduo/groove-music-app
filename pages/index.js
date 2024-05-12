@@ -8,24 +8,26 @@ export default function Home() {
     const RESPONSE_TYPE = "token"
 
     const router = useRouter();
+    const [token, setToken] = useState("");
 
     useEffect(() => {
-        const hashParams = window.location.hash.substr(1).split("&").reduce(function (result, item) {
+        const hashParams = window && window.location.hash.substr(1).split("&").reduce(function (result, item) {
             const parts = item.split("=");
             result[parts[0]] = parts[1];
             return result;
         }, {});
 
-        if (hashParams.access_token) {
-            sessionStorage.setItem("accessToken", hashParams.access_token);
+        if (hashParams && hashParams.access_token) {
+            setToken(hashParams.access_token);
             router.replace(router.asPath.split('#')[0]);
         }
     }, []);
 
-    const token = sessionStorage.getItem("accessToken");
-
     const handleLogout = () => {
-        sessionStorage.removeItem("accessToken");
+        if (typeof window !== 'undefined') {
+            window.sessionStorage.removeItem("accessToken");
+            setToken("");
+        }
     };
 
     return (
