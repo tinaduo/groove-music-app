@@ -86,7 +86,6 @@ export default function NewReview() {
 
     return (
         <main className={`${styles.main}`}>
-            {token &&
                 <form>
                     <div className={styles.backbuttonContainer}>
                             <Link
@@ -111,7 +110,6 @@ export default function NewReview() {
                         onChange={e => setSearchKey(e.target.value)}
                     />
                 </form>
-            }
             {songs.length > 0 ? renderSongs() : <h2 className={`${styles.errorMessage}`}>no search results</h2>}
         </main>
     );
