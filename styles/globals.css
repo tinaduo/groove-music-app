@@ -19,6 +19,11 @@
 }
 
 @font-face {
+    font-family: 'Lexend Bold';
+    src: url('/fonts/Lexend-Bold.ttf');
+}
+
+@font-face {
     font-family: 'Lexend Thin';
     src: url('/fonts/Lexend-Thin.ttf');
 }

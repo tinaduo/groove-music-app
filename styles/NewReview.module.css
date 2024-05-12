@@ -78,10 +78,10 @@
 
 .errorMessage {
     color: var(--groovy-white);
-    font-family: 'Lexend Bold';
+    font-family: 'Lexend';
     font-weight: 400;
-    font-size: var(--lexend-body);
-    padding: 280px;
+    font-size: var(--lexend-header);
+    margin-top: 280px;
 }
 
 .backbuttonContainer {

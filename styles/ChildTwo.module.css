@@ -9,6 +9,7 @@
 
 .result h3 {
     text-align: center;
+    font-size: var(--lexend-subheader);
     margin-bottom: -145px;
     margin-top: -30px;
 }
@@ -55,6 +56,7 @@
     border: #242527;
     border-radius: 26px;
     font-family: 'Lexend';
+    font-size: var(--lexend-body);
     color: white;
     margin-top: 20px;
 }
@@ -65,7 +67,7 @@
 
 .groove {
     margin-top: 30px;
-    font-family: 'PP Monument Extended Light';
+    font-family: 'PP Monument Extended Regular';
     font-size: 17px;
     text-align: center;
 }
