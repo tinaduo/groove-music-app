@@ -117,12 +117,6 @@ export default function StatsPage() {
                         </svg>
                     </Link>
                 </div>
-                {!token && (
-                    <a className={styles.paragraph} href={`${AUTH_ENDPOINT}?client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URI}&response_type=${RESPONSE_TYPE}&scope=${SCOPES}`}>
-                        Login to Spotify
-                    </a>
-                )}
-                {token && (
                     <div className={styles.main}>
                         <h1 className={styles.genresHeader}>Your Top Genres</h1>
                         <div className={styles.canvasContainer} >
@@ -136,7 +130,6 @@ export default function StatsPage() {
                             href="/Quiz"
                             className={styles.buttonContainer}>Go to Tunebox!</Link>
                     </div>
-                )}
             </main>
         </>
     );
