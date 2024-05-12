@@ -65,26 +65,24 @@ export default function NewReview() {
         searchSongs();
     }, [searchKey, token]);
 
-const renderSongs = () => {
-    const MAX_TITLE_LENGTH = 30;
-    return (
-        <div className={`${styles.albumGrid}`}>
-            {songs.map(song => (
-                <div key={song.id} className={`${styles.albumContainer}`} onClick={() => handleSongClick(song)}>
-                    <div className={`${styles.albumItem}`}>
-                        {song.album.images.length ? <img className={`${styles.songCover}`} width={"168px"} src={song.album.images[0].url} alt="" /> : <div>No Image</div>}
-                        <div className={`${styles.textContainer}`}>
-                            <h3 className={`${styles.songName}`}>{song.name.length > MAX_TITLE_LENGTH ? `${song.name.substring(0, MAX_TITLE_LENGTH)}...` : song.name}</h3>
-                            <p className={`${styles.artistName}`}>{song.artists.map(artist => artist.name).join(", ")}</p>
-                            {song.album.release_date ? <p className={`${styles.releaseYear}`}>Release Year: {song.album.release_date.substring(0, 4)}</p> : null}
+    const renderSongs = () => {
+        const MAX_TITLE_LENGTH = 30;
+        return (
+            <div className={`${styles.albumGrid}`}>
+                {songs.map(song => (
+                    <div key={song.id} className={`${styles.albumContainer}`} onClick={() => handleSongClick(song)}>
+                        <div className={`${styles.albumItem}`}>
+                            {song.album.images.length ? <img className={`${styles.songCover}`} width={"168px"} src={song.album.images[0].url} alt="" /> : <div>No Image</div>}
+                            <div className={`${styles.textContainer}`}>
+                                <h3 className={`${styles.songName}`}>{song.name.length > MAX_TITLE_LENGTH ? `${song.name.substring(0, MAX_TITLE_LENGTH)}...` : song.name}</h3>
+                                <p className={`${styles.artistName}`}>{song.artists.map(artist => artist.name).join(", ")}</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-            ))}
-        </div>
-    );
-};
-
+                ))}
+            </div>
+        );
+    };
 
     return (
         <main className={`${styles.main}`}>
