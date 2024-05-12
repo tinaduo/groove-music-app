@@ -13,7 +13,6 @@ const defaultOptions = {
 };
 
 export default function Onboarding() {
-    const { token, handleLogout } = useToken();
     const [isHovered, setIsHovered] = useState(false);
     const [isHovered2, setIsHovered2] = useState(false);
 
