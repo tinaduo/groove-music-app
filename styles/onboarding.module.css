@@ -1,11 +1,8 @@
 .container {
-    height: 100vh;
-    width: 430px;
+    width: 100%;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    background-color: var(--background-black);
-    top: 0;
 }
 
 .secondContainer {
@@ -79,19 +76,21 @@
 
 .blackBG h2 {
     font-family: 'Lexend';
+    font-size: 33.18px;
+    
 }
 
 .text {
     margin-top: 20px;
     font-size: 16px;
-    font-family: 'Lexend Thin';
+    font-family: 'Lexend';
 }
 
 .next {
     font-size: 20px;
     font-family: Lexend;
     color: #AEACAC;
-    margin-top: 60px;
+    margin-top: 35px;
     display: flex;
     flex-direction: row;
     column-gap: 15px;
