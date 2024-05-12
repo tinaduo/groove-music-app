@@ -1,19 +1,32 @@
 import "@/styles/globals.css";
 import { useEffect } from 'react';
 import { useRouter } from 'next/router';
-import { getSessionToken } from '../utils/auth';
 
 function App({ Component, pageProps }) {
-  const router = useRouter();
+    const router = useRouter();
 
-  useEffect(() => {
-    const token = getSessionToken();
-    if (!token && router.pathname !== '/login') {
-      router.push('/login');
-    }
-  }, []);
+    useEffect(() => {
+        const hashParams = window.location.hash.substr(1).split("&").reduce(function (result, item) {
+            const parts = item.split("=");
+            result[parts[0]] = parts[1];
+            return result;
+        }, {});
 
-  return <Component {...pageProps} />;
+        if (hashParams.access_token) {
+            sessionStorage.setItem("spotifyToken", hashParams.access_token);
+        } else {
+            const storedToken = sessionStorage.getItem("spotifyToken");
+            if (!storedToken && router.pathname !== '/login') {
+                router.push('/login');
+            }
+        }
+    }, []);
+
+    return (
+        <>
+            <Component {...pageProps} />
+        </>
+    );
 }
 
 export default App;
