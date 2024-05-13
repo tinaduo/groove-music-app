@@ -7,6 +7,7 @@ import CarouselComponent from '@/components/HorizontalScroll/HorizontalScroll';
 import FilterButton from '@/components/FilterButton';
 import { useState } from 'react';
 import Head from 'next/head';
+import Snackbar from '@/components/SnackBar';
 
 export default function Explore() {
   const postcards = reviewData.map((review, index) => (
@@ -86,6 +87,19 @@ export default function Explore() {
     });
 };
 
+const [showSnackbar, setShowSnackbar] = useState(false);
+  const [snackbarMessage, setSnackbarMessage] = useState('');
+
+  const handleCloseSnackbar = () => {
+    setShowSnackbar(false);
+    setSnackbarMessage('');
+  };
+
+  const displaySnackbar = (message) => {
+    setSnackbarMessage('Your Review has been Posted!');
+    setShowSnackbar(true);
+  };
+
   return (
   <>
     <Head>
@@ -98,6 +112,9 @@ export default function Explore() {
       <div  className={styles.scroll}>
         <div className={styles.groove}><h1>GROOVE</h1></div>
         <CarouselComponent images={images} />
+        {showSnackbar && (
+        <Snackbar message={snackbarMessage} onClose={handleCloseSnackbar} />
+        )}
           <div className={styles.feed}>
             <h3>Your Feed</h3>
             <div className={styles.buttons}>
