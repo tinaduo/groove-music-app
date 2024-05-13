@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import styles from './PostForm.module.css';
 import StarRating from '@/components/StarRating';
-import Snackbar from "@/components/Snackbar";
 
 export function PostForm() {
     const [title, setTitle] = useState('');
