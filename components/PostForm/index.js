@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
-import { useHistory } from 'react-router-dom';
 import styles from './PostForm.module.css';
-import StarRating from '../StarRating';
-import SnackBar from "@/components/SnackBar"; 
+import StarRating from '@/components/StarRating';
+import Snackbar from "@/components/Snackbar";
 
 export function PostForm() {
     const [title, setTitle] = useState('');
@@ -10,8 +9,6 @@ export function PostForm() {
     const [date, setDate] = useState('');
     const [showSnackbar, setShowSnackbar] = useState(false);
     const [snackbarMessage, setSnackbarMessage] = useState('');
-
-    const history = useHistory();
 
     const handleTitleChange = (event) => {
         setTitle(event.target.value);
@@ -25,7 +22,7 @@ export function PostForm() {
         setDate(event.target.value);
     };
 
-    const displaySnackBar = (message) => {
+    const displaySnackbar = (message) => { 
         setSnackbarMessage(message);
         setShowSnackbar(true);
         setTimeout(() => {
@@ -42,8 +39,7 @@ export function PostForm() {
         setTitle('');
         setReview('');
         setDate('');
-        history.push('/Explore');
-        displaySnackBar('Review posted successfully!');
+        displaySnackbar('Review posted successfully!');
     };
 
     return (
@@ -128,8 +124,7 @@ export function PostForm() {
                     Post Review
                 </button>
             </form>
-            {/* Snackbar */}
-            {showSnackbar && <SnackBar message={snackbarMessage} onClose={() => setShowSnackbar(false)} />}
+            {showSnackbar && <Snackbar message={snackbarMessage} onClose={() => setShowSnackbar(false)} />}
         </div>
     );
 }
