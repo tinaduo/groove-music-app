@@ -86,6 +86,11 @@ export default function NewReview() {
 
     return (
         <main className={`${styles.main}`}>
+            {!token ?
+                <a href={`${AUTH_ENDPOINT}?client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URI}&response_type=${RESPONSE_TYPE}`}>
+                    Search with Spotify</a>
+                :  <a href={`${AUTH_ENDPOINT}?client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URI}&response_type=${RESPONSE_TYPE}`}>
+                    Search with Groove</a>}
 
             {token &&
                 <form>
