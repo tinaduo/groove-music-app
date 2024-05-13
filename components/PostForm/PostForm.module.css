@@ -115,3 +115,7 @@
 .stars {
     font-family: 'Lexend', sans-serif;
 }
+
+.subtitleCheckbox {
+    display: flex;
+}
