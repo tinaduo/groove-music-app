@@ -7,6 +7,8 @@ const REDIRECT_URI = "https://groove-music-app.vercel.app/onboarding"
 const AUTH_ENDPOINT = "https://accounts.spotify.com/authorize"
 const RESPONSE_TYPE = "token"
 
+import { useEffect, useState } from 'react';
+
 export default function Home() {
     const [token, setToken] = useState("");
 
@@ -50,7 +52,7 @@ export default function Home() {
                 {!token ?
                     <a
                         className={`${styles.spotifyButton}`}
-                        href={`${AUTH_ENDPOINT}?redirect_uri=${REDIRECT_URI}&response_type=${RESPONSE_TYPE}`}>
+                        href={`${AUTH_ENDPOINT}?client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URI}&response_type=${RESPONSE_TYPE}`}>
                         Login to Spotify
                     </a>
                     :
