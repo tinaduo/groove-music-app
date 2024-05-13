@@ -1,7 +1,6 @@
 import Image from 'next/image';
 import styles from './NavBar.module.css';
 import Link from 'next/link';
-import { useEffect } from 'react';
 
 const CLIENT_ID = "22ed42382ae44ed69f8d3a6da1c6e077"
 const REDIRECT_URI = "https://groove-music-app.vercel.app/newreview"
@@ -48,13 +47,12 @@ export default function NavBar() {
           </Link>
         </li>
         <li>
-        {!token ?
-          <Link href={`${AUTH_ENDPOINT}?client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URI}&response_type=${RESPONSE_TYPE}`} className={styles.text}>
+          <Link href="/newreview" className={styles.text}>
             <div className={styles.link}>
               <Image src="/images/newPost.svg" alt="New Post" width={30} height={30} />
               <span>New Post</span>
             </div>
-          </Link> : null }
+          </Link>
         </li>
         <li>
           <Link href="/Activity" className={styles.text}>
