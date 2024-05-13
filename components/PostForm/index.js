@@ -7,6 +7,7 @@ export function PostForm() {
     const [title, setTitle] = useState('');
     const [review, setReview] = useState('');
     const [date, setDate] = useState('');
+    const [isFormValid, setIsFormValid] = useState(false);
 
     const handleTitleChange = (event) => {
         setTitle(event.target.value);
@@ -32,6 +33,14 @@ export function PostForm() {
         setTitle('');
         setReview('');
         setDate('');
+    };
+
+    const validateForm = () => {
+        if (title.trim() !== '' && review.trim() !== '' && date !== '') {
+            setIsFormValid(true);
+        } else {
+            setIsFormValid(false);
+        }
     };
 
     return (
@@ -111,7 +120,8 @@ export function PostForm() {
             </div>
             <button
                 className={styles.submitButton}
-                onClick={goToExplorePage}>
+                onClick={goToExplorePage}
+                disabled={!isFormValid}>
                 Post Review
             </button>
         </form>
