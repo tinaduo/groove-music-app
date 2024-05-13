@@ -22,7 +22,9 @@ export function PostForm() {
     };
 
     const goToExplorePage = () => {
-    window.location.href = '/Explore';
+        if (isFormValid) {
+            window.location.href = '/Explore';
+        }
     };
 
     const handleSubmit = (event) => {
