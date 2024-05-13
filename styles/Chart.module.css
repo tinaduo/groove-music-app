@@ -12,6 +12,7 @@
     font-family: 'Lexend';
     text-align: center;
     margin-bottom: 35px;
+    justify-content: center;
 }
 
 .paragraph {
@@ -96,4 +97,5 @@
 .chartContainer {
     border: 2px solid var(--groovy-white);
     border-radius: 20px;
+    padding: 20px 15px
 }
