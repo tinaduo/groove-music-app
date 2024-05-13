@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import styles from './PostForm.module.css';
 import StarRating from '@/components/StarRating';
-import StarRating from '@/components/StarRating';
 
 export function PostForm() {
     const [title, setTitle] = useState('');
