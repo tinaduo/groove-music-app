@@ -1,5 +1,5 @@
 import NextAuth from 'next-auth';
-import providers from 'next-auth/providers';
+import { providers } from 'next-auth';
 
 export default NextAuth({
   providers: [
