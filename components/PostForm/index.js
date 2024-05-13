@@ -21,7 +21,7 @@ export function PostForm() {
     };
 
     const goToExplorePage = () => {
-    window.location.href = '/explore';
+    window.location.href = '/Explore';
     };
 
     const handleSubmit = (event) => {
