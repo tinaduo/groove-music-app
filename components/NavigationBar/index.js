@@ -53,7 +53,7 @@ export default function NavBar() {
               <Image src="/images/newPost.svg" alt="New Post" width={30} height={30} />
               <span>New Post</span>
             </div>
-          </Link>
+          </Link> : null }
         </li>
         <li>
           <Link href="/Activity" className={styles.text}>
