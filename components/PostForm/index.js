@@ -11,19 +11,24 @@ export function PostForm() {
 
     const handleTitleChange = (event) => {
         setTitle(event.target.value);
+        validateForm();
     };
 
     const handleReviewChange = (event) => {
         setReview(event.target.value);
+        validateForm();
     };
 
     const handleDateChange = (event) => {
         setDate(event.target.value);
+        validateForm();
     };
 
-    const goToExplorePage = () => {
-        if (isFormValid) {
-            window.location.href = '/Explore';
+    const validateForm = () => {
+        if (title.trim() !== '' && review.trim() !== '' && date !== '') {
+            setIsFormValid(true);
+        } else {
+            setIsFormValid(false);
         }
     };
 
@@ -35,13 +40,15 @@ export function PostForm() {
         setTitle('');
         setReview('');
         setDate('');
+        goToExplorePage();
     };
 
-    const validateForm = () => {
-        if (title.trim() !== '' && review.trim() !== '' && date !== '') {
-            setIsFormValid(true);
+    const goToExplorePage = () => {
+        if (isFormValid) {
+            console.log("Navigating to Explore page...");
+            window.location.href = '/Explore';
         } else {
-            setIsFormValid(false);
+            console.log("Form is not valid. Cannot navigate.");
         }
     };
 
