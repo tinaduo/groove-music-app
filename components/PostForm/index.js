@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import styles from './PostForm.module.css';
 import StarRating from '@/components/StarRating';
+import SnackBar from '@/components/SnackBar';
 
 export function PostForm() {
     const [title, setTitle] = useState('');
@@ -123,7 +124,7 @@ export function PostForm() {
                     Post Review
                 </button>
             </form>
-            {showSnackbar && <Snackbar message={snackbarMessage} onClose={() => setShowSnackbar(false)} />}
+            {showSnackbar && <SnackBar message={snackbarMessage} onClose={() => setShowSnackbar(false)} />}
         </div>
     );
 }
