@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import styles from './NavBar.module.css';
 import Link from 'next/link';
+import { useEffect } from 'react';
 
 const CLIENT_ID = "22ed42382ae44ed69f8d3a6da1c6e077"
 const REDIRECT_URI = "https://groove-music-app.vercel.app/newreview"
