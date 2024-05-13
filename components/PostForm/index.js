@@ -7,29 +7,17 @@ export function PostForm() {
     const [title, setTitle] = useState('');
     const [review, setReview] = useState('');
     const [date, setDate] = useState('');
-    const [isFormValid, setIsFormValid] = useState(false);
 
     const handleTitleChange = (event) => {
         setTitle(event.target.value);
-        validateForm();
     };
 
     const handleReviewChange = (event) => {
         setReview(event.target.value);
-        validateForm();
     };
 
     const handleDateChange = (event) => {
         setDate(event.target.value);
-        validateForm();
-    };
-
-    const validateForm = () => {
-        if (title.trim() !== '' && review.trim() !== '' && date !== '') {
-            setIsFormValid(true);
-        } else {
-            setIsFormValid(false);
-        }
     };
 
     const handleSubmit = (event) => {
@@ -44,13 +32,15 @@ export function PostForm() {
     };
 
     const goToExplorePage = () => {
-        if (isFormValid) {
+        if (title.trim() !== '' && review.trim() !== '' && date !== '') {
             console.log("Navigating to Explore page...");
             window.location.href = '/Explore';
         } else {
             console.log("Form is not valid. Cannot navigate.");
         }
     };
+
+    const shouldHideButton = title.trim() === '' || review.trim() === '' || date === '';
 
     return (
         <form className={styles.postForm} onSubmit={handleSubmit}>
@@ -59,7 +49,7 @@ export function PostForm() {
                     className={styles.headers}
                     for="rating">Rating</label>
                 <br />
-                <StarRating/>
+                <StarRating />
                 <label
                     className={styles.headers}
                     for="title">Title</label>
@@ -127,12 +117,11 @@ export function PostForm() {
                     </div>
                 </div>
             </div>
-            <button
-                className={styles.submitButton}
-                onClick={goToExplorePage}
-                disabled={!isFormValid}>
-                Post Review
-            </button>
+            {!shouldHideButton && (
+                <button className={styles.submitButton} type="submit">
+                    Post Review
+                </button>
+            )}
         </form>
     );
 }
