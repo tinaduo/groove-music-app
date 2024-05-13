@@ -7,7 +7,6 @@ import CarouselComponent from '@/components/HorizontalScroll/HorizontalScroll';
 import FilterButton from '@/components/FilterButton';
 import { useState } from 'react';
 import Head from 'next/head';
-import Snackbar from '@/components/SnackBar';
 
 export default function Explore() {
   const postcards = reviewData.map((review, index) => (
