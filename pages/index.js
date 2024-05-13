@@ -24,6 +24,8 @@ export default function Home() {
             if (hashParams.access_token) {
                 sessionStorage.setItem("spotifyToken", hashParams.access_token);
                 setToken(hashParams.access_token);
+                const newUrl = window.location.href.split('#')[0];
+                window.history.replaceState({}, document.title, newUrl);
             }
         }
     }, []);
