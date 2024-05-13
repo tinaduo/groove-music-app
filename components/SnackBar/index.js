@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import styles from './Snackbar.module.css';
+import styles from './SnackBar.module.css';
 
 const Snackbar = ({ message, onClose }) => {
     useEffect(() => {
