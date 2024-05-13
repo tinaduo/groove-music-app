@@ -3,6 +3,7 @@ import LottiePlayer from '@/components/LottiePlayer';
 import styles from '@/styles/ChildTwo.module.css';
 import dynamic from 'next/dynamic';
 import NavBar from '@/components/NavigationBar';
+import { useState } from 'react';
 
 
 const Lottie = dynamic(() => import('react-lottie'), { ssr: false });
@@ -14,6 +15,9 @@ const defaultOptions = {
 };
 
 export default function ChildTwo({ result, lottiePath, buttonLink, chip}) {
+  
+  const [token, setToken] = useState("");
+
   return (
     <div className={styles.result}>
       <h3>your groove today is...</h3>

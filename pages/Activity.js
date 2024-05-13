@@ -2,6 +2,7 @@ import NotificationsList from '@/components/NotificationsList';
 import React from 'react';
 import styles from '../styles/Activity.module.css'
 import NavBar from '@/components/NavigationBar';
+import { useState } from 'react';
 
 const activityData = {
   New: [
@@ -33,6 +34,9 @@ const activityData = {
 };
 
 export default function Activity() {
+  
+      const [token, setToken] = useState("");
+
   return (
     <>
       <main className={styles.main}>

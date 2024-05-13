@@ -4,6 +4,7 @@ import NavBar from '@/components/NavigationBar';
 
 export default function ChildOne({ decisionData, onDecision, onPrevious }) {
   const [selection, setSelection] = useState(null);
+  const [token, setToken] = useState("");
 
   const handleNext = () => {
     if (selection) {
