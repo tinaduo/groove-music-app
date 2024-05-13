@@ -89,3 +89,21 @@
     margin-top: 37px;
     margin-bottom: 37px;;
 }
+
+.spotifyButton {
+    display: flex;
+    width: 395px;
+    height: 45px;
+    align-items: center;
+    border-radius: 10px;
+    background-color: #363739;
+    color: #7D7E80;
+    font-family: 'Lexend';
+    font-size: 13.33px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    border: none;
+    padding-left: 15px;
+    text-decoration: none;
+}
