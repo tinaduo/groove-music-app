@@ -16,8 +16,8 @@ export default function Onboarding() {
 
     return (
         <main className={styles.container}>
-             <div className={styles.secondContainer}>
-               <div className={styles.logo}>
+            <div className={styles.secondContainer}>
+                <div className={styles.logo}>
                     <img src="/images/onboardingLogo.png" />
                 </div>
                 <div className={styles.logo2}>

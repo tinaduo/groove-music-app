@@ -118,23 +118,28 @@ export default function StatsPage() {
                     </Link>
                 </div>
                 {!token && (
-                    <a className={styles.paragraph} href={`${AUTH_ENDPOINT}?client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URI}&response_type=${RESPONSE_TYPE}&scope=${SCOPES}`}>
-                        Login to Spotify
-                    </a>
+                    <>
+                        <p className={styles.paragraphLogin}>Login with Spotify to see your charts</p>
+                        <a className={styles.spotifyButton} href={`${AUTH_ENDPOINT}?client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URI}&response_type=${RESPONSE_TYPE}&scope=${SCOPES}`}>
+                            Login with Spotify
+                        </a>
+                    </>
                 )}
                 {token && (
                     <div className={styles.main}>
+                        <div className={styles.chartContainer}>
                         <h1 className={styles.genresHeader}>Your Top Genres</h1>
                         <canvas
                             className={styles.chartCanvas}
                             id="myChart"
                         ></canvas>
+                        </div>
+                        <p className={styles.paragraph}>This chart is a colourful and intuitive visual breakdown of your top genres, offering a pieced-together snapshot of your musical inclinations. Each section corresponds to a genre that resonates with your listening habits, highlighting the rich variety in your playlist. It's an at-a-glance revelation of where your audio adventures have taken you, a reflection of your eclectic taste. To explore these sounds that strike a chord with you, step into 'Tunebox' and let your personal soundtrack unfold.</p>
                         <Link
                             href="/Quiz"
                             className={styles.buttonContainer}>Go to Tunebox</Link>
                     </div>
                 )}
-                <p className={styles.paragraph}>This chart is a colourful and intuitive visual breakdown of your top genres, offering a pieced-together snapshot of your musical inclinations. Each section corresponds to a genre that resonates with your listening habits, highlighting the rich variety in your playlist. It's an at-a-glance revelation of where your audio adventures have taken you, a reflection of your eclectic taste. To explore these sounds that strike a chord with you, step into 'Tunebox' and let your personal soundtrack unfold.</p>
             </main>
         </>
     );

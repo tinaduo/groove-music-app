@@ -3,7 +3,6 @@
     flex-direction: column;
     align-items: center;
     background-color: var(--background-black);
-    height: 932px;
 }
 
 .genresHeader {
@@ -65,4 +64,36 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.spotifyButton {
+    display: flex;
+    font-family: 'Lexend Bold' , Arial, Helvetica, sans-serif;
+    color: var(--background-black);
+    text-decoration: none;
+    background-color: #1ed760;
+    cursor: pointer;
+    width: 243px;
+    height: 48px;
+    border-radius: 50px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.paragraphLogin {
+    font-size: var(--lexend-body);
+    font-family: 'Lexend';
+    color: var(--groovy-white) ;
+    padding: 10px;
+    width: 405px;
+    margin-top: 20px;
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.chartContainer {
+    border: 2px solid var(--groovy-white);
+    border-radius: 20px;
 }
