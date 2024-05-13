@@ -70,7 +70,6 @@
     margin-left: 10px;
     width: 20px;
     background-color: #363739;
-    left: 760px;
 }
 
 .searchBar:focus {
@@ -95,6 +94,7 @@
     display: flex;
     width: 395px;
     height: 45px;
+    padding: 16px 10px;
     align-items: center;
     border-radius: 10px;
     background-color: #363739;
