@@ -30,7 +30,7 @@
     justify-content: center;
     margin-top: 45%;
     text-align: center;
-    color: white;
+    color: var(--groovy-white);
     z-index: 2;
     font-family: 'PP Monument Extended Regular';
     font-size: 25px;
@@ -73,7 +73,7 @@
     width: 430px;
     height: 343px;
     background: var(--background-black);
-    color: #fff;
+    color: var(--groovy-white);
     margin-top: auto;
     z-index: 3;
     text-align: left;
@@ -89,19 +89,19 @@
 
 .blackBG h2 {
     font-family: 'Lexend';
-    font-size: 33.18px;
+    font-size: var(--lexend-header);
 }
 
 .text {
     margin-top: 20px;
-    font-size: 16px;
+    font-size: var(--lexend-body);
     font-family: 'Lexend';
 }
 
 .next {
     font-size: 20px;
-    font-family: Lexend;
-    color: #AEACAC;
+    font-family: 'Lexend';
+    color: var(--unselected-button-lightgrey);
     margin-top: 35px;
     display: flex;
     flex-direction: row;
@@ -117,8 +117,8 @@
 
 .back {
     font-size: 20px;
-    font-family: Lexend;
-    color: #AEACAC;
+    font-family: 'Lexend';
+    color: var(--unselected-button-lightgrey);
     margin-top: 35px;
     display: flex;
     flex-direction: row;
@@ -167,5 +167,5 @@
     width: 24px;
     height: 11px;
     border-radius: 10px;
-    background: #9E80F1;
+    background: var(--groovy-purple);
 }

@@ -33,7 +33,7 @@ export default function Quiz() {
           <div className={styles.groove}><h1>GROOVE</h1></div>
           <header className={styles.header}>
             <div className={styles.logo}>
-              <Lottie options={defaultOptions} height={313} width={313} />
+              <Lottie options={defaultOptions} height={280} width={280} />
             </div>
           </header>
           <div className={styles.test}>

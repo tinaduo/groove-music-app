@@ -4,7 +4,7 @@
     padding: 6px 14px;
     color: var(--groovy-white);
     font-family: 'Lexend';
-    font-size: 13.33px;
+    font-size: var(--lexend-body);
     margin: 5px;
     transition: background-color 0.8s; 
     display: inline-flex;

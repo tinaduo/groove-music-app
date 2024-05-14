@@ -20,6 +20,15 @@
     background-color: var(--background-black);
 }
 
+.parentContainer {
+    height: 100vh;
+    width: 430px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--background-black);
+}
+
 .backbuttonLink {
     width: 405px;
     margin-top: 67px;

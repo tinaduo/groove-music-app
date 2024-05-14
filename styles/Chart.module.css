@@ -33,9 +33,9 @@
     font-size: var(--lexend-body);
     background-color: var(--button-gray);
     color: var(--groovy-white);
-    width: 158px;
+    width: 170px;
     height: 45px;
-    padding: 13px 22px 12px 20px;
+    padding: 13px 22px 30px 20px;
     border-radius: 29.5px;
     border: 3px solid var(--groovy-white);
     margin-top: 50px;

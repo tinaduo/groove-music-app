@@ -53,8 +53,8 @@
 
 .feed {
   font-family: 'Lexend';
-  font-size: 23px;
-  color: #9166EC;
+  font-size: var(--lexend-subheader);
+  color: var(--groovy-purple);
   margin-top: 20px;
   padding-left: 20px;
   display: flex;
