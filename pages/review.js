@@ -11,6 +11,55 @@ export default function ReviewPage() {
     const [genres, setGenres] = useState([]);
     const [gradientColor, setGradientColor] = useState("linear-gradient(180deg, #0E0F11, #0E0F11)"); // default gradient color
     const router = useRouter();
+    const [token, setToken] = useState("");
+    const { name, artists, albumImage, id } = router.query;
+
+    useEffect(() => {
+        const fetchGenres = async () => {
+            try {
+                const response = await fetch(`https://api.spotify.com/v1/tracks/${id}`, {
+                    headers: {
+                        Authorization: `Bearer ${token}`
+                    }
+                });
+
+                if (!response.ok) {
+                    throw new Error('Failed to fetch data');
+                }
+
+                const data = await response.json();
+                if (data.genres) {
+                    setGenres(data.genres);
+                }
+            } catch (error) {
+                console.error('Error fetching genres:', error);
+            }
+        };
+
+        if (id) {
+            fetchGenres();
+        }
+    }, [id, token]);
+
+    useEffect(() => {
+        const storedToken = sessionStorage.getItem("spotifyToken");
+        if (storedToken) {
+            setToken(storedToken);
+        } else {
+            const hashParams = window.location.hash.substr(1).split("&").reduce(function (result, item) {
+                const parts = item.split("=");
+                result[parts[0]] = parts[1];
+                return result;
+            }, {});
+
+            if (hashParams.access_token) {
+                sessionStorage.setItem("spotifyToken", hashParams.access_token);
+                setToken(hashParams.access_token);
+                const newUrl = window.location.href.split('#')[0];
+                window.history.replaceState({}, document.title, newUrl);
+            }
+        }
+    }, []);
 
     useEffect(() => {
         const { name, artists, albumImage } = router.query;
@@ -37,28 +86,6 @@ export default function ReviewPage() {
             setGradientColor(gradient);
         };
 
-        const fetchGenres = async () => {
-            try {
-                const response = await fetch(`https://api.spotify.com/v1/search?q=${encodeURIComponent(songData.name)}&type=track`, {
-                    headers: {
-                        Authorization: `Bearer ${YOUR_SPOTIFY_ACCESS_TOKEN}`
-                    }
-                });
-
-                if (!response.ok) {
-                    throw new Error('Failed to fetch genres');
-                }
-
-                const data = await response.json();
-                if (data.tracks && data.tracks.items && data.tracks.items.length > 0) {
-                    setGenres(data.tracks.items[0].genres);
-                }
-            } catch (error) {
-                console.error('Error fetching genres:', error);
-            }
-        };
-
-        fetchGenres();
     }, [songData]);
 
     return (
@@ -88,7 +115,11 @@ export default function ReviewPage() {
                                 <div className={styles.textContainer}>
                                     <h2 className={styles.songName}>{songData.name}</h2>
                                     <p className={styles.artistName}>{songData.artists.join(", ")}</p>
-                                    <p className={styles.genre}>{genres.join(", ")}</p>
+                                    <p className={styles.genre}>
+                                        {genres.map((genre, index) => (
+                                            <span key={index}>{genre}</span>
+                                        ))}
+                                    </p>
                                 </div>
                             </div>
                             <PostForm />

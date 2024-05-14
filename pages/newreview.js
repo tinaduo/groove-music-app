@@ -22,7 +22,8 @@ export default function NewReview() {
             query: {
                 name: song.name,
                 artists: song.artists.map(artist => artist.name).join(','),
-                albumImage: song.album.images.length ? song.album.images[0].url : ''
+                albumImage: song.album.images.length ? song.album.images[0].url : '',
+                id: song.id
             },
         });
     };
