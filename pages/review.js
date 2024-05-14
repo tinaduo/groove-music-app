@@ -117,11 +117,9 @@ export default function ReviewPage() {
                                 <div className={styles.textContainer}>
                                     <h2 className={styles.songName}>{songData.name}</h2>
                                     <p className={styles.artistName}>{songData.artists.join(", ")}</p>
-                                    <p className={styles.genre}>
                                         {genres.map((genre, index) => (
-                                            <span key={index}>{genre}</span>
+                                            <span className={styles.genresContainer} key={index}>{genre}text</span>
                                         ))}
-                                    </p>
                                 </div>
                             </div>
                             <PostForm />
