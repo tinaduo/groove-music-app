@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styles from "./PostForm.module.css";
-import StarRating from '../StarRating';
+import StarRating from './StarRating';
 
 
 export function PostForm() {
@@ -21,13 +21,19 @@ export function PostForm() {
         setDate(event.target.value);
     };
 
-    const handleRatingChange = (newRating) => {
-        setRating(newRating);
-    };
-
     const handleSubmit = (event) => {
         event.preventDefault();
-        if (title.trim() !== '' && review.trim() !== '' && date !== '' && rating !== 0) {
+        console.log('Title:', title);
+        console.log('Review:', review);
+        console.log('Date:', date);
+        setTitle('');
+        setReview('');
+        setDate('');
+        goToExplorePage();
+    };
+
+    const goToExplorePage = () => {
+        if (title.trim() !== '' && review.trim() !== '' && date !== '') {
             console.log("Navigating to Explore page...");
             window.location.href = '/Explore';
         } else {
@@ -35,7 +41,7 @@ export function PostForm() {
         }
     };
 
-    const shouldHideButton = title.trim() === '' || review.trim() === '' || date === '' || rating === 0;
+    const shouldHideButton = title.trim() === '' || review.trim() === '' || date === '';
 
     return (
         <form className={styles.postForm} onSubmit={handleSubmit}>
@@ -44,7 +50,7 @@ export function PostForm() {
                     className={styles.headers}
                     for="rating">Rating</label>
                 <br />
-                <StarRating value={rating} onChange={handleRatingChange} />
+                <StarRating />
                 <label
                     className={styles.headers}
                     for="title">Title</label>

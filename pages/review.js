@@ -11,6 +11,32 @@ export default function ReviewPage() {
     const [genres, setGenres] = useState([]);
     const [gradientColor, setGradientColor] = useState("linear-gradient(180deg, #0E0F11, #0E0F11)"); // default gradient color
     const router = useRouter();
+    const [token, setToken] = useState("");
+
+    useEffect(() => {
+        const storedToken = sessionStorage.getItem("spotifyToken");
+        if (storedToken) {
+            setToken(storedToken);
+        } else {
+            const hashParams = window.location.hash.substr(1).split("&").reduce(function (result, item) {
+                const parts = item.split("=");
+                result[parts[0]] = parts[1];
+                return result;
+            }, {});
+
+            if (hashParams.access_token) {
+                sessionStorage.setItem("spotifyToken", hashParams.access_token);
+                setToken(hashParams.access_token);
+                const newUrl = window.location.href.split('#')[0];
+                window.history.replaceState({}, document.title, newUrl);
+            }
+        }
+    }, []);
+
+    const handleLogout = () => {
+        sessionStorage.removeItem("spotifyToken");
+        setToken("");
+    };
 
     useEffect(() => {
         const { name, artists, albumImage } = router.query;
@@ -41,7 +67,7 @@ export default function ReviewPage() {
             try {
                 const response = await fetch(`https://api.spotify.com/v1/search?q=${encodeURIComponent(songData.name)}&type=track`, {
                     headers: {
-                        Authorization: `Bearer ${YOUR_SPOTIFY_ACCESS_TOKEN}`
+                        Authorization: `Bearer ${token}`
                     }
                 });
 
