@@ -1,13 +1,12 @@
 import React, { useState } from 'react';
 import styles from "./PostForm.module.css";
-import StarRating from './StarRating';
+import StarRating from '../StarRating';
 
 
 export function PostForm() {
     const [title, setTitle] = useState('');
     const [review, setReview] = useState('');
     const [date, setDate] = useState('');
-    const [rating, setRating] = useState(0);
 
     const handleTitleChange = (event) => {
         setTitle(event.target.value);
