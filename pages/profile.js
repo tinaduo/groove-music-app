@@ -6,10 +6,10 @@ import Postcard from "@/components/Postcard";
 import reviewData from '../data/ReviewData';
 
 export default function StatsPage() {
-    const postcards = reviewData.map((review, index) => (
-        <Postcard key={review.id || index} {...review} />
-    ));
-    
+    const selectedPostcards = [
+        <Postcard key={reviewData[4].id} {...reviewData[4]} />,
+        <Postcard key={reviewData[1].id} {...reviewData[1]} />,
+      ];
 
     return (
         <>
@@ -35,9 +35,9 @@ export default function StatsPage() {
                     <div className={styles.profileimagePlaceholder}>
                         <img className={styles.profileImage} src="/images/profilepicture.jpg"/>
                         <h3 className={styles.usernameHeader}>@rockpaper.sza</h3>
-                        <h3 className={styles.reviewHeader}>Your Review</h3>
+                        <h3 className={styles.reviewHeader}>Your Reviews</h3>
                     </div>
-                    <div className={styles.cards}>{postcards}</div>
+                    <div className={styles.cards}>{selectedPostcards}</div>
                     <div className={styles.nav}><NavBar/></div>
                 </div>
             </main>

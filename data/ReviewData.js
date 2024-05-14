@@ -51,6 +51,19 @@ const reviewData = [
         likes: '87 likes, 72 replies',
         bgColor: '#385165'
     },
+    {
+        id: 5,
+        albumCover: '/images/CTRL.png',
+        albumName: 'Drew Barrymore',
+        artistName: 'SZA • Song',
+        reviewTitle: "Might be my favourite sza song!",
+        stars: '/images/fiveStars.svg',
+        review: "SZA's 'Drew Barrymore' is a hauntingly beautiful track that effortlessly blends soulful vocals with poignant lyrics. With its raw emotion and nostalgic charm, it's a captivating musical tribute that leaves a lasting impression. Highly recommended...",
+        userProfile: '/images/profilepicture.jpg',
+        user: 'rockpaper.sza',
+        likes: '25 likes, 24 replies',
+        bgColor: '#1C2F20'
+    },
 ];
 
 export default reviewData;
