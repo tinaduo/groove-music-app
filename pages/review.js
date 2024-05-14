@@ -39,7 +39,7 @@ export default function ReviewPage() {
         if (id) {
             fetchGenres();
         }
-    }, [id, token]); 
+    }, [id, token]);
 
     useEffect(() => {
         const storedToken = sessionStorage.getItem("spotifyToken");
@@ -85,7 +85,7 @@ export default function ReviewPage() {
             const gradient = `linear-gradient(180deg, ${dominantColor}, ${fallbackColor})`;
             setGradientColor(gradient);
         };
-        
+
     }, [songData]);
 
     return (
@@ -115,7 +115,11 @@ export default function ReviewPage() {
                                 <div className={styles.textContainer}>
                                     <h2 className={styles.songName}>{songData.name}</h2>
                                     <p className={styles.artistName}>{songData.artists.join(", ")}</p>
-                                    <p className={styles.genre}>{data.genres}</p>
+                                    <p className={styles.genre}>
+                                        {genres.map((genre, index) => (
+                                            <span key={index}>{genre}</span>
+                                        ))}
+                                    </p>
                                 </div>
                             </div>
                             <PostForm />
