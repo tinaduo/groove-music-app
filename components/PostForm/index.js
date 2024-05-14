@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import styles from "./PostForm.module.css";
-import StarRating from '../StarRating';
+import StarRating from './StarRating';
 
 
 export function PostForm() {
     const [title, setTitle] = useState('');
     const [review, setReview] = useState('');
     const [date, setDate] = useState('');
+    const [rating, setRating] = useState(0);
 
     const handleTitleChange = (event) => {
         setTitle(event.target.value);
@@ -20,19 +21,13 @@ export function PostForm() {
         setDate(event.target.value);
     };
 
-    const handleSubmit = (event) => {
-        event.preventDefault();
-        console.log('Title:', title);
-        console.log('Review:', review);
-        console.log('Date:', date);
-        setTitle('');
-        setReview('');
-        setDate('');
-        goToExplorePage();
+    const handleRatingChange = (newRating) => {
+        setRating(newRating);
     };
 
-    const goToExplorePage = () => {
-        if (title.trim() !== '' && review.trim() !== '' && date !== '') {
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        if (title.trim() !== '' && review.trim() !== '' && date !== '' && rating !== 0) {
             console.log("Navigating to Explore page...");
             window.location.href = '/Explore';
         } else {
@@ -40,7 +35,7 @@ export function PostForm() {
         }
     };
 
-    const shouldHideButton = title.trim() === '' || review.trim() === '' || date === '';
+    const shouldHideButton = title.trim() === '' || review.trim() === '' || date === '' || rating === 0;
 
     return (
         <form className={styles.postForm} onSubmit={handleSubmit}>
