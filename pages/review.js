@@ -8,61 +8,29 @@ import Head from "next/head";
 
 export default function ReviewPage() {
     const [songData, setSongData] = useState(null);
-    const [genres, setGenres] = useState([]);
     const [gradientColor, setGradientColor] = useState("linear-gradient(180deg, #0E0F11, #0E0F11)"); // default gradient color
     const router = useRouter();
     const [token, setToken] = useState("");
 
     useEffect(() => {
-        const fetchToken = async () => {
-            const storedToken = sessionStorage.getItem("spotifyToken");
-            if (storedToken) {
-                setToken(storedToken);
-            } else {
-                const hashParams = window.location.hash.substr(1).split("&").reduce(function (result, item) {
-                    const parts = item.split("=");
-                    result[parts[0]] = parts[1];
-                    return result;
-                }, {});
+        const storedToken = sessionStorage.getItem("spotifyToken");
+        if (storedToken) {
+            setToken(storedToken);
+        } else {
+            const hashParams = window.location.hash.substr(1).split("&").reduce(function (result, item) {
+                const parts = item.split("=");
+                result[parts[0]] = parts[1];
+                return result;
+            }, {});
 
-                if (hashParams.access_token) {
-                    sessionStorage.setItem("spotifyToken", hashParams.access_token);
-                    setToken(hashParams.access_token);
-                    const newUrl = window.location.href.split('#')[0];
-                    window.history.replaceState({}, document.title, newUrl);
-                }
+            if (hashParams.access_token) {
+                sessionStorage.setItem("spotifyToken", hashParams.access_token);
+                setToken(hashParams.access_token);
+                const newUrl = window.location.href.split('#')[0];
+                window.history.replaceState({}, document.title, newUrl);
             }
-        };
-
-        fetchToken();
+        }
     }, []);
-
-    useEffect(() => {
-        const fetchGenres = async () => {
-            try {
-                if (!token) return;
-
-                const response = await fetch(`https://api.spotify.com/v1/tracks/${router.query.id}`, {
-                    headers: {
-                        Authorization: `Bearer ${token}`
-                    }
-                });
-
-                if (!response.ok) {
-                    throw new Error('Failed to fetch data');
-                }
-
-                const data = await response.json();
-                if (data.genres) {
-                    setGenres(data.genres);
-                }
-            } catch (error) {
-                console.error('Error fetching genres:', error);
-            }
-        };
-
-        fetchGenres();
-    }, [router.query.id, token]);
 
     useEffect(() => {
         const { name, artists, albumImage } = router.query;
@@ -88,6 +56,29 @@ export default function ReviewPage() {
             const gradient = `linear-gradient(180deg, ${dominantColor}, ${fallbackColor})`;
             setGradientColor(gradient);
         };
+
+        const fetchGenres = async () => {
+            try {
+                const response = await fetch(`https://api.spotify.com/v1/search?q=${encodeURIComponent(songData.name)}&type=track`, {
+                    headers: {
+                        Authorization: `Bearer ${token}`
+                    }
+                });
+
+                if (!response.ok) {
+                    throw new Error('Failed to fetch genres');
+                }
+
+                const data = await response.json();
+                if (data.tracks && data.tracks.items && data.tracks.items.length > 0) {
+                    setGenres(data.tracks.items[0].genres);
+                }
+            } catch (error) {
+                console.error('Error fetching genres:', error);
+            }
+        };
+
+        fetchGenres();
     }, [songData]);
 
     return (
@@ -117,12 +108,6 @@ export default function ReviewPage() {
                                 <div className={styles.textContainer}>
                                     <h2 className={styles.songName}>{songData.name}</h2>
                                     <p className={styles.artistName}>{songData.artists.join(", ")}</p>
-                                    {genres.length > 0 && (
-                                        genres.map((genre, index) => (
-                                            <span className={styles.genresContainer} key={index}>{genre} text</span>
-                                        ))
-                                    )}
-
                                 </div>
                             </div>
                             <PostForm />

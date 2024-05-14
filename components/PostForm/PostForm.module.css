@@ -118,3 +118,13 @@
     display: flex;
     align-items: center;
 }
+
+.subtitleCounter {
+    font-family: 'Lexend', sans-serif;
+    font-size: var(--lexend-subtitle-light);
+    color: white;
+    width: 406px;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 25px;
+}

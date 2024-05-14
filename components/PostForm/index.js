@@ -78,7 +78,7 @@ export function PostForm() {
                     required />
                 <br />
                 <span
-                    className={styles.subtitle}>
+                    className={styles.subtitleCounter}>
                     Maximum: {2500 - review.length}/2500
                 </span>
             </div>
