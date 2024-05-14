@@ -146,12 +146,11 @@ export default function Settings() {
   
   };
   // CODE FOR CHANGING TEXT SIZE----------------
-   const [selectedSize, setSelectedSize] = useState('16px'); // Default selection
+   const [selectedSize, setSelectedSize] = useState('16px');
 
-  // Function to update font size and set selected size
   const textSize = (size) => {
     document.documentElement.style.fontSize = size;
-    setSelectedSize(size); // Update the selected size state
+    setSelectedSize(size);
   };
 
 

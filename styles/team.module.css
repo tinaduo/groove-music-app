@@ -92,7 +92,7 @@
 
 .placeholder2 {
     transform: translateY(40px) rotate(13.32deg);
-    z-index: 2; /* Ensures it overlays appropriately if needed */
+    z-index: 2; 
 }
 
 .placeholder3 {
