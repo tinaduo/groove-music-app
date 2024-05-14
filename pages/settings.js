@@ -259,9 +259,6 @@ export default function Settings() {
               </div>
             </div>
           </div>
-          <div className={styles.languageContainer}>
-            <h5 className={styles.languageHeader}>Language</h5>
-          </div>
           <div className={styles.otherContainer}>
             <h5 className={styles.otherHeader}>Other</h5>
             <Link
