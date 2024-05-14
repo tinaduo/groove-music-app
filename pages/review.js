@@ -33,11 +33,6 @@ export default function ReviewPage() {
         }
     }, []);
 
-    const handleLogout = () => {
-        sessionStorage.removeItem("spotifyToken");
-        setToken("");
-    };
-
     useEffect(() => {
         const { name, artists, albumImage } = router.query;
         if (name && artists && albumImage) {
@@ -78,6 +73,8 @@ export default function ReviewPage() {
                 const data = await response.json();
                 if (data.tracks && data.tracks.items && data.tracks.items.length > 0) {
                     setGenres(data.tracks.items[0].genres);
+                } else {
+                    console.error('No track data found:', data);
                 }
             } catch (error) {
                 console.error('Error fetching genres:', error);
