@@ -39,7 +39,7 @@ export default function Onboarding() {
                             <div></div>
                             <div></div>
                         </div>
-                        <Link href="/onboarding2" className={styles.link}>
+                        <Link tabIndex="1" href="/onboarding2" className={styles.link}>
                             <div className={styles.next}>
                                 <span>next</span>
                                 <div

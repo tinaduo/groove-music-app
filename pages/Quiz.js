@@ -39,9 +39,14 @@ export default function Quiz() {
           <div className={styles.test}>
             <h2 className={styles.welcome}>Welcome to Tunebox!</h2>
             <p className={styles.text}>Tunebox is your musical compass, guiding you to the perfect playlist that resonates with your current mood. Personalized playlists that hit all the right notes.</p>
-            <button className={styles.start} onClick={navigateToQuizOne}>Get Started</button>
+            <button 
+              className={styles.start} 
+              tabIndex="1"
+              onClick={navigateToQuizOne}>
+                Get Started
+            </button>
           </div>
-          <div className={styles.navBar}><NavBar /></div>
+          <div className={styles.navBar}><NavBar tabIndex="2"/></div>
         </div>
       </main>
     </>

@@ -96,6 +96,7 @@ export default function NewReview() {
             </Head>
             <div className={styles.backbuttonContainer}>
                 <Link
+                    tabIndex="1"
                     className={styles.backbuttonLink}
                     href="/Explore">
                     <svg className={styles.backButton} width="50" height="18" viewBox="0 0 50 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -105,8 +106,8 @@ export default function NewReview() {
                 </Link>
             </div>
             {!token ?
-                <a className={`${styles.spotifyButton}`} href={`${AUTH_ENDPOINT}?client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URI}&response_type=${RESPONSE_TYPE}`}>
-                    search</a>
+                <a tabIndex="2" className={`${styles.spotifyButton}`} href={`${AUTH_ENDPOINT}?client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URI}&response_type=${RESPONSE_TYPE}`}>
+                    login to spotify to search</a>
                 : null}
             {token &&
                 <form>
@@ -117,6 +118,7 @@ export default function NewReview() {
                     </svg>
                     <input
                         className={`${styles.searchBar}`}
+                        tabIndex="2"
                         type="text"
                         value={searchKey}
                         placeholder="search"

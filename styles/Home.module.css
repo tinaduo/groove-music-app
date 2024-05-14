@@ -3,6 +3,8 @@
   flex-direction: column;
   align-items: center;
   padding: 6rem;
+  height: 932px;
+  justify-content: center;
   background-color: var(--background-black);
 }
 
@@ -22,29 +24,17 @@
 .spotifyButton {
   display: flex;
   font-family: 'Lexend Bold' , Arial, Helvetica, sans-serif;
-  color: var(--background-black);
+  color: var(--groovy-white);
   text-decoration: none;
-  background-color: #1ed760;
+  background-color: var(--groovy-purple);
   cursor: pointer;
   width: 243px;
   height: 48px;
   border-radius: 50px;
   text-align: center;
-  display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.spotifybuttonContainer {
-  background-color: #1ed760;
-  cursor: pointer;
-  width: 243px;
-  height: 48px;
-  border-radius: 50px;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  margin-top: 35px;
 }
 
 .buttonContainer {
@@ -53,3 +43,46 @@
   align-items: center;
 }
 
+.form {
+  color: var(--groovy-white);
+  font-family: 'Lexend';
+  display: flex;
+  flex-direction: column;
+  margin-top: 35px;
+}
+
+.label {
+  font-family: "Lexend Bold";
+}
+
+.input {
+  color: var(--groovy-white);
+  width: 377px;
+  height: 40px;
+  padding: 11px;
+  border-radius: 28px;
+  border: 2px solid var(--button-gray);
+  background-color: var(--dark--grey);
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+
+.formContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.spotifyContainer {
+  display: flex;
+  align-self: center;
+}
+
+.checkboxContainer {
+  display: flex;
+  align-items: center;
+}
+
+.checkbox {
+  font-family: "Lexend";
+  margin-left: 5px;
+}

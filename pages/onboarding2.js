@@ -43,7 +43,7 @@ export default function Onboarding() {
                             <div></div>
                         </div>
                         <div className={styles.navigation}>
-                            <Link href="/onboarding3" className={styles.link}>
+                            <Link tabIndex="3" href="/onboarding3" className={styles.link}>
                                 <div className={styles.next}>
                                     <span>next</span>
                                     <div
@@ -53,7 +53,7 @@ export default function Onboarding() {
                                     </div>
                                 </div>
                             </Link>
-                            <Link href="/onboarding" className={styles.link}>
+                            <Link tabIndex="2" href="/onboarding" className={styles.link}>
                                 <div className={styles.back}>
                                     <div
                                         onMouseEnter={() => setIsHovered2(true)}
