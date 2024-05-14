@@ -44,7 +44,7 @@ export function PostForm() {
                     className={styles.headers}
                     for="rating">Rating</label>
                 <br />
-                <StarRating />
+                <StarRating value={rating} onChange={handleRatingChange} />
                 <label
                     className={styles.headers}
                     for="title">Title</label>
