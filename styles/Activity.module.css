@@ -1,6 +1,6 @@
 .main {
     background: var(--background-black);
-    color: #fff;
+    color: var(--groovy-white);
     display: flex;
     flex-direction: column;
     align-items: center;
