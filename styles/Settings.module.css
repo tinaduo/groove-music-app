@@ -124,6 +124,15 @@
     height: 32.15px;
     border-radius: 5px;
     border: 1px solid var(--unselected-icongrey);
+    background: transparent;
+}
+
+.textContainerActive {
+    background: #9E80F1 !important;
+}
+
+.textHeaderActive {
+    color: white !important;
 }
 
 .smalltextHeader {
