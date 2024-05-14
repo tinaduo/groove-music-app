@@ -14,58 +14,57 @@
 }
 
 @font-face {
-    font-family: 'Lexend Thin';
-    src: url('/fonts/Lexend-Thin.ttf');
+  font-family: 'Lexend Thin';
+  src: url('/fonts/Lexend-Thin.ttf');
 }
 
 .container {
-    width: 430px;
+  width: 430px;
 }
 
 .title {
-    font-size: 20px;
-    margin-top: 20px;
-    margin-bottom: 10px;
-    color: white;
-    font-family: 'Lexend';
-    font-size: 23px;
-  }
+  font-size: var(--lexend-subheader);
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: white;
+  font-family: 'Lexend';
+  margin-left: 10px;
+}
   
-  .activityItem {
-    display: flex;
-    justify-content: space-between;
+.activityItem {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: white;
+  font-family: 'Lexend';
+  border-top: solid #ffffff15 1px;
+}
 
-    margin-bottom: 10px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    color: white;
-    font-family: 'Lexend';
-    border-top: solid #ffffff15 1px;
-  }
-
-  .info {
-    width: 268px;
-  }
+.info {
+  width: 268px;
+}
   
-  .userPic {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    margin-right: 10px;
-  }
+.userPic {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+  margin-left: 10px;
+}
 
-  .userName {
-    font-size: 13.33px;
-    font-weight: bold;
-  }
+.userName {
+  font-size: 13.33px;
+  font-weight: bold;
+}
 
-  .description {
-    font-size: 12px;
-    
-  }
+.description {
+  font-size: 12px;
+}
   
   
 .time {
-    margin-left: 5px;
-    font-size: 11px;
-  }
+  font-size: 11px;
+  margin-right: 10px;
+}

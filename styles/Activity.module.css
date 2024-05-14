@@ -10,6 +10,8 @@
 
 .container {
     height: 100vh;
+    width: 430px;
+
 }
 
 
@@ -28,7 +30,7 @@
 
 .title h2 {
     font-family: 'Lexend';
-    font-size: 33.18px;
+    font-size: var(--lexend-header);
     
 }
 
