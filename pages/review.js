@@ -15,6 +15,27 @@ export default function ReviewPage() {
     const { name, artists, albumImage, id } = router.query;
 
     useEffect(() => {
+        const storedToken = sessionStorage.getItem("spotifyToken");
+        if (storedToken) {
+            setToken(storedToken);
+        } else {
+            const hashParams = window.location.hash.substr(1).split("&").reduce(function (result, item) {
+                const parts = item.split("=");
+                result[parts[0]] = parts[1];
+                return result;
+            }, {});
+
+            if (hashParams.access_token) {
+                sessionStorage.setItem("spotifyToken", hashParams.access_token);
+                setToken(hashParams.access_token);
+                const newUrl = window.location.href.split('#')[0];
+                window.history.replaceState({}, document.title, newUrl);
+            }
+        }
+    }, []);
+
+
+    useEffect(() => {
         const fetchGenres = async () => {
             try {
                 const response = await fetch(`https://api.spotify.com/v1/tracks/${id}`, {
@@ -40,26 +61,6 @@ export default function ReviewPage() {
             fetchGenres();
         }
     }, [id, token]);
-
-    useEffect(() => {
-        const storedToken = sessionStorage.getItem("spotifyToken");
-        if (storedToken) {
-            setToken(storedToken);
-        } else {
-            const hashParams = window.location.hash.substr(1).split("&").reduce(function (result, item) {
-                const parts = item.split("=");
-                result[parts[0]] = parts[1];
-                return result;
-            }, {});
-
-            if (hashParams.access_token) {
-                sessionStorage.setItem("spotifyToken", hashParams.access_token);
-                setToken(hashParams.access_token);
-                const newUrl = window.location.href.split('#')[0];
-                window.history.replaceState({}, document.title, newUrl);
-            }
-        }
-    }, []);
 
     useEffect(() => {
         const { name, artists, albumImage } = router.query;
