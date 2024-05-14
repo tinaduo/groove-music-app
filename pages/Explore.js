@@ -9,9 +9,13 @@ import { useState } from 'react';
 import Head from 'next/head';
 
 export default function Explore() {
-  const postcards = reviewData.map((review, index) => (
-    <Postcard key={review.id || index} {...review} />
-  ));
+  const postcards = [
+    <Postcard key={reviewData[0].id} {...reviewData[0]} />,
+    <Postcard key={reviewData[1].id} {...reviewData[1]} />,
+    <Postcard key={reviewData[2].id} {...reviewData[2]} />,
+    <Postcard key={reviewData[3].id} {...reviewData[3]} />,
+
+  ];
 
   const images = [
     {src: '/images/sos2.png', subtitle: 'SOS', artist: 'SZA'},
