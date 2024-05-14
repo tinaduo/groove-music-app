@@ -87,12 +87,6 @@ export default function ReviewPage() {
 
             const gradient = `linear-gradient(180deg, ${dominantColor}, ${fallbackColor})`;
             setGradientColor(gradient);
-
-            const renderGenres = () => {
-                return genres.map((genre, index) => (
-                    <span className={styles.genresContainer} key={index}>{genre}</span>
-                ));
-            };
         };
     }, [songData]);
 
@@ -123,7 +117,12 @@ export default function ReviewPage() {
                                 <div className={styles.textContainer}>
                                     <h2 className={styles.songName}>{songData.name}</h2>
                                     <p className={styles.artistName}>{songData.artists.join(", ")}</p>
-                                    {renderGenres()}
+                                    {genres.length > 0 && (
+                                        genres.map((genre, index) => (
+                                            <span className={styles.genresContainer} key={index}>{genre} text</span>
+                                        ))
+                                    )}
+
                                 </div>
                             </div>
                             <PostForm />
