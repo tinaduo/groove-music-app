@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styles from "./PostForm.module.css";
-import StarRating from './StarRating';
+import StarRating from '../StarRating';
 
 
 export function PostForm() {
