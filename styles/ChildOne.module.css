@@ -94,4 +94,13 @@
 
 .backArrow {
     margin-right: 13px;
+    fill: white;
+}
+
+.submitButton:focus .nextArrow   {
+    fill: black; 
+}
+
+.submitButton:focus .backArrow {
+    fill: black !important;
 }

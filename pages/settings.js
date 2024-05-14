@@ -1,9 +1,10 @@
 import styles from "@/styles/Settings.module.css"
 import Link from "next/link";
 import Head from "next/head";
+import { useState } from 'react';
 
 export default function Settings() {
-
+  // CODE FOR LIGHT MODE --------------
   const handleLightSelectionClick = () => {
     const parentContainerElement = document.querySelector(`.${styles.parentContainer}`);
     
@@ -32,13 +33,13 @@ export default function Settings() {
     const containersChangeDarkmodeBorder = document.querySelectorAll(`.${styles.darkBox}`);
 
     containersChangeDarkmodeBorder.forEach(container => {
-      container.style.border = 'none'; // Remove the border
+      container.style.border = 'none';
     });
 
     const containersChangeSystemmodeBorder = document.querySelectorAll(`.${styles.systemBox}`);
 
     containersChangeSystemmodeBorder.forEach(container => {
-      container.style.border = 'none'; // Remove the border
+      container.style.border = 'none';
     });
 
     const backButtonLight = document.querySelector(`.${styles.backbuttonLink}`);
@@ -50,7 +51,7 @@ export default function Settings() {
     }
 
   };
-
+  // CODE FOR DARK MODE --------------
   const handleDarkSelectionClick = () => {
     const parentContainerElement = document.querySelector(`.${styles.parentContainer}`);
     
@@ -79,13 +80,13 @@ export default function Settings() {
     const containersChangeLightmodeBorder = document.querySelectorAll(`.${styles.lightBox}`);
 
     containersChangeLightmodeBorder.forEach(container => {
-      container.style.border = 'none'; // Remove the border
+      container.style.border = 'none'; 
     });
 
     const containersChangeSystemmodeBorder = document.querySelectorAll(`.${styles.systemBox}`);
 
     containersChangeSystemmodeBorder.forEach(container => {
-      container.style.border = 'none'; // Remove the border
+      container.style.border = 'none';
     });
 
     const backButtonDark = document.querySelector(`.${styles.backbuttonLink}`);
@@ -97,7 +98,7 @@ export default function Settings() {
     }
   
   };
-  
+  // CODE FOR SYSTEM MODE --------------------
   const handleSystemSelectionClick = () => {
     const parentContainerElement = document.querySelector(`.${styles.parentContainer}`);
     
@@ -144,8 +145,16 @@ export default function Settings() {
     }
   
   };
+  // CODE FOR CHANGING TEXT SIZE----------------
+   const [selectedSize, setSelectedSize] = useState('16px'); // Default selection
 
-  
+  // Function to update font size and set selected size
+  const textSize = (size) => {
+    document.documentElement.style.fontSize = size;
+    setSelectedSize(size); // Update the selected size state
+  };
+
+
   return (
     <>
     <Head>
@@ -240,14 +249,14 @@ export default function Settings() {
           <div className={styles.textsizeContainer}>
             <h5 className={styles.textsizeHeader}>Text Size</h5>
             <div className={styles.textsizeselectionContainer}>
-              <div className={styles.smalltextContainer}>
-                <p className={styles.smalltextHeader}>Small</p>
+              <div className={`${styles.smalltextContainer} ${selectedSize === '12px' ? styles.textContainerActive : ''}`} onClick={() => textSize('12px')}>
+                <p className={`${styles.smalltextHeader} ${selectedSize === '12px' ? styles.textHeaderActive : ''}`}>Small</p>
               </div>
-              <div className={styles.mediumtextContainer}>
-                <p className={styles.mediumtextHeader}>Medium</p>
+              <div className={`${styles.mediumtextContainer} ${selectedSize === '16px' ? styles.textContainerActive : ''}`} onClick={() => textSize('16px')}>
+                <p className={`${styles.mediumtextHeader} ${selectedSize === '16px' ? styles.textHeaderActive : ''}`}>Medium</p>
               </div>
-              <div className={styles.largetextContainer}>
-                <p className={styles.largetextHeader}>Large</p>
+              <div className={`${styles.largetextContainer} ${selectedSize === '18px' ? styles.textContainerActive : ''}`} onClick={() => textSize('18px')}>
+                <p className={`${styles.largetextHeader} ${selectedSize === '18px' ? styles.textHeaderActive : ''}`}>Large</p>
               </div>
             </div>
           </div>
