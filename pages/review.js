@@ -12,33 +12,37 @@ export default function ReviewPage() {
     const [gradientColor, setGradientColor] = useState("linear-gradient(180deg, #0E0F11, #0E0F11)"); // default gradient color
     const router = useRouter();
     const [token, setToken] = useState("");
-    const { name, artists, albumImage, id } = router.query;
 
     useEffect(() => {
-        const storedToken = sessionStorage.getItem("spotifyToken");
-        if (storedToken) {
-            setToken(storedToken);
-        } else {
-            const hashParams = window.location.hash.substr(1).split("&").reduce(function (result, item) {
-                const parts = item.split("=");
-                result[parts[0]] = parts[1];
-                return result;
-            }, {});
+        const fetchToken = async () => {
+            const storedToken = sessionStorage.getItem("spotifyToken");
+            if (storedToken) {
+                setToken(storedToken);
+            } else {
+                const hashParams = window.location.hash.substr(1).split("&").reduce(function (result, item) {
+                    const parts = item.split("=");
+                    result[parts[0]] = parts[1];
+                    return result;
+                }, {});
 
-            if (hashParams.access_token) {
-                sessionStorage.setItem("spotifyToken", hashParams.access_token);
-                setToken(hashParams.access_token);
-                const newUrl = window.location.href.split('#')[0];
-                window.history.replaceState({}, document.title, newUrl);
+                if (hashParams.access_token) {
+                    sessionStorage.setItem("spotifyToken", hashParams.access_token);
+                    setToken(hashParams.access_token);
+                    const newUrl = window.location.href.split('#')[0];
+                    window.history.replaceState({}, document.title, newUrl);
+                }
             }
-        }
-    }, []);
+        };
 
+        fetchToken();
+    }, []);
 
     useEffect(() => {
         const fetchGenres = async () => {
             try {
-                const response = await fetch(`https://api.spotify.com/v1/tracks/${id}`, {
+                if (!token) return;
+
+                const response = await fetch(`https://api.spotify.com/v1/tracks/${router.query.id}`, {
                     headers: {
                         Authorization: `Bearer ${token}`
                     }
@@ -57,10 +61,8 @@ export default function ReviewPage() {
             }
         };
 
-        if (id) {
-            fetchGenres();
-        }
-    }, [id, token]);
+        fetchGenres();
+    }, [router.query.id, token]);
 
     useEffect(() => {
         const { name, artists, albumImage } = router.query;
@@ -86,7 +88,6 @@ export default function ReviewPage() {
             const gradient = `linear-gradient(180deg, ${dominantColor}, ${fallbackColor})`;
             setGradientColor(gradient);
         };
-
     }, [songData]);
 
     return (
